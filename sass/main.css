@@ -495,6 +495,29 @@ footer {
   border-radius: 5px;
 }
 
+.tablaObrasoc ul {
+  list-style: none;
+}
+
+.tablaObrasoc ul li {
+  color: #516f15;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .tablaObrasoc ul li {
+    font-size: 1.2rem;
+  }
+}
+
+.tablaObrasoc td {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}
+
 .tablaObrasoc__cabecera td {
   border-width: 0px 0px 0px 0px;
   text-align: center;
@@ -506,6 +529,12 @@ footer {
           animation: color-change-2x 2s linear infinite alternate both;
 }
 
+@media screen and (max-width: 768px) {
+  .tablaObrasoc__cabecera td {
+    font-size: 1.3rem;
+  }
+}
+
 .tablaObrasoc__fila {
   background-color: white;
 }
@@ -515,24 +544,14 @@ footer {
   font-weight: bold;
 }
 
-.tablaObrasoc__fila ul {
-  list-style: none;
-}
-
-.tablaObrasoc__fila ul li {
-  color: #516f15;
-  font-weight: bold;
-  font-style: italic;
-}
-
-@media screen and (max-width: 480px) {
-  .tablaObrasoc__fila ul li {
-    font-size: 1.1rem;
+@media screen and (max-width: 768px) {
+  .tablaObrasoc__fila td {
+    font-size: 1.3rem;
   }
 }
 
 .tablaObrasoc__filaAlt {
-  background-color: rgba(135, 170, 222, 0.201);
+  background-color: rgba(74, 130, 215, 0.201);
 }
 
 .tablaObrasoc__filaAlt td {
@@ -540,97 +559,12 @@ footer {
   font-weight: bold;
 }
 
-.tablaObrasoc__filaAlt ul {
-  list-style: none;
-}
-
-.tablaObrasoc__filaAlt ul li {
-  color: #516f15;
-  font-weight: bold;
-  font-style: italic;
-}
-
-@media screen and (max-width: 480px) {
-  .tablaObrasoc__filaAlt ul li {
-    font-size: 1.1rem;
+@media screen and (max-width: 768px) {
+  .tablaObrasoc__filaAlt td {
+    font-size: 1.3rem;
   }
 }
 
-.tablaObrasoc td {
-  border: 1px solid #000000;
-  text-align: center;
-  padding: 10px;
-  font-size: 15px;
-}
-
-/*
-
-.cabeceraTabla {
-    td {
-        
-        border-width:0px 0px 0px 0px;
-        text-align: center;        
-        font-size: 14px;
-        font-family: Arial;
-        font-weight: bold;
-        color: #ffffff;
-        animation: color-change-2x 2s linear infinite alternate both;
-       
-      
-    }
-
-    
-}
-
-.rowPrin{
-    background-color: white;
-
-    td{
-        color: $fuenteAzul;
-        font-weight: bold;
-    }
-
-    ul {
-        list-style: none;
-
-        li {
-            color: rgb(81, 111, 21);
-            font-weight: bold;
-            font-style: italic;
-
-            @include movil {
-                font-size: 1.1rem;
-            }
-        }
-
-
-    }
-}
-
-.rowAlt{
-    background-color: rgba(135, 170, 222, 0.201);
-
-    td{
-        color: rgb(79, 6, 147);
-        font-weight: bold;
-    }
-    ul {
-        list-style: none;
-
-        li {
-            color: rgb(81, 111, 21);
-            font-weight: bold;
-            font-style: italic;
-
-            @include movil {
-                font-size: 1.1rem;
-            }
-        }
-
-
-    }
-}
-*/
 .contenedor_obrasoc {
   padding-bottom: 10px;
   display: -webkit-box;
