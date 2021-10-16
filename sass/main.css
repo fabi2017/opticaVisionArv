@@ -486,35 +486,108 @@ footer {
 }
 
 /*-------------SECCION OBRAS SOCIALES--------*/
-/* 
-.tObrasoc {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 4fr 4fr 4fr;
-    margin-bottom: 10px;
-    padding: 0 5px;
+.tablaObrasoc {
+  width: 100%;
+  -webkit-box-shadow: 10px 10px 5px #888888;
+          box-shadow: 10px 10px 5px #888888;
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
 
-    &__header {
-        background-color: rgba(16, 5, 50, 0.646);
-        color: rgba(253, 255, 253, 0.831);
+.tablaObrasoc__cabecera td {
+  border-width: 0px 0px 0px 0px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #ffffff;
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+          animation: color-change-2x 2s linear infinite alternate both;
+}
+
+.tablaObrasoc__fila {
+  background-color: white;
+}
+
+.tablaObrasoc__fila td {
+  color: #182163;
+  font-weight: bold;
+}
+
+.tablaObrasoc__fila ul {
+  list-style: none;
+}
+
+.tablaObrasoc__fila ul li {
+  color: #516f15;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 480px) {
+  .tablaObrasoc__fila ul li {
+    font-size: 1.1rem;
+  }
+}
+
+.tablaObrasoc__filaAlt {
+  background-color: rgba(135, 170, 222, 0.201);
+}
+
+.tablaObrasoc__filaAlt td {
+  color: #4f0693;
+  font-weight: bold;
+}
+
+.tablaObrasoc__filaAlt ul {
+  list-style: none;
+}
+
+.tablaObrasoc__filaAlt ul li {
+  color: #516f15;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 480px) {
+  .tablaObrasoc__filaAlt ul li {
+    font-size: 1.1rem;
+  }
+}
+
+.tablaObrasoc td {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}
+
+/*
+
+.cabeceraTabla {
+    td {
+        
+        border-width:0px 0px 0px 0px;
+        text-align: center;        
+        font-size: 14px;
+        font-family: Arial;
         font-weight: bold;
-        text-align: center;
-        padding-top: 20px;
+        color: #ffffff;
         animation: color-change-2x 2s linear infinite alternate both;
+       
+      
     }
 
-    &__tabla {
-        padding: 5px 0px;
-        font-weight: 400;
+    
+}
+
+.rowPrin{
+    background-color: white;
+
+    td{
         color: $fuenteAzul;
         font-weight: bold;
-    }
-
-    &__alt {
-        background-color: rgba(135, 170, 222, 0.201);
-        color: rgb(22, 22, 143);
-        font-weight: bold;
-        padding: 5px 0px;
     }
 
     ul {
@@ -532,7 +605,32 @@ footer {
 
 
     }
-} */
+}
+
+.rowAlt{
+    background-color: rgba(135, 170, 222, 0.201);
+
+    td{
+        color: rgb(79, 6, 147);
+        font-weight: bold;
+    }
+    ul {
+        list-style: none;
+
+        li {
+            color: rgb(81, 111, 21);
+            font-weight: bold;
+            font-style: italic;
+
+            @include movil {
+                font-size: 1.1rem;
+            }
+        }
+
+
+    }
+}
+*/
 .contenedor_obrasoc {
   padding-bottom: 10px;
   display: -webkit-box;
