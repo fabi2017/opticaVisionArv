@@ -1,0 +1,49 @@
+@import "mediaqueries";
+
+/*--------------SECCION PRODUCTOS--------*/
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__contImag {
+
+        width: 380px;
+        box-shadow: $sombreado;
+        height: 300px;
+        margin-bottom: 60px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h5 {
+            box-shadow: $sombreado;
+        }
+    }
+
+    &__contVideo {
+        padding: 10px 0;
+
+        &--video {
+            padding-right: 50px;
+            height: 320px;
+
+            @include tablet {
+
+                margin-left: 5rem;
+
+            }
+
+            @include movil{
+                height: 13rem;
+                margin-right: 2rem;
+            }
+        }
+
+
+    }
+}

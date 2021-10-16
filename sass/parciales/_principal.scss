@@ -1,0 +1,120 @@
+@import "mediaqueries";
+
+/*-----------PRINCIPAL-----------*/
+.grilla {
+    display: grid;
+    grid-template-columns: 1.3fr 0.2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-template-areas: ". .";
+    padding: 20px;
+
+    @include tablet{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    @include movil{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    &__catalogoPrin {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &--img {
+
+            border-radius: $borde+30;
+            padding-right: 10px;
+            height: 220px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__banner {
+
+        border-radius: $borde/2;
+        margin: 5px;
+        padding-top: 180px;
+        height: 600px;
+        box-shadow: $sombreado;
+        animation: color-cambio-2x 2s linear infinite alternate both;
+        
+        @include tablet {
+           
+            margin: 5px;
+            padding-top: 100px;
+            height: 350px;
+            width: 100%;
+        }
+
+       
+
+        &--titulo {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &--text {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &--img {
+            height: 70px;
+            padding: 5px;
+
+            @include tablet{
+                height: 5rem;
+                padding-left: 2.5rem;
+            }
+
+            @include movil { 
+                height: 4rem;
+                padding-left: 3rem;
+                
+            }
+        }
+    }
+}
+
+.marcas {
+    margin-bottom: 10px;
+
+    @include tablet {
+        margin-bottom: 30px;
+    }
+
+    @include movil {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        width: 10rem;
+        margin-left: 250px;
+
+        @include  movil{
+            margin-left: 5rem;
+        }
+
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 1.5rem;
+        color: black;
+        font-style: italic;
+
+        @include tablet{
+            font-size: 2rem;
+        }
+    }
+}

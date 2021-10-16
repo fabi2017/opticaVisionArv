@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----------------Keywords y Descripcion------------------------->
+    <meta name="keywords" content="OPTICA, SUCURSALES, CONTACTO, COROBA, TELEFONO , VISIONARV, UBICACION">
+    <meta name="description" content="Somos una de las ópticas más reconocidas del sector.Estamos ubicados Córdoba.Contamos con dos Sucursales en Cordoba Capital">
+    <link rel="shortcut icon" href="../media/icon.png">
+    <!--Enlace Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--enlace para la fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap" rel="stylesheet">
+    <!--enlace para los iconos-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!--Hoja de estilo-->
+    <link rel="stylesheet" href="../sass/main.css">
+    <!--Enlace animacion-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Contacto - VisionArv</title>
+</head>
+
+
+<body>
+    <header>
+        <!------------------------------Navbar------------------------------------->
+        <nav class="navbar navbar-expand-lg navbar-light navegador">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="../index.html">
+                    <img src="../media/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                    <ul class="navbar-nav align-items-center barraMenu mt-4">
+                        <li>
+                            <a class="nav-link" href="./productos.html">Productos</a>                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./obrasociales.html">Obras Sociales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!------------------------------------------MAIN---------------------------------------------------------->
+    <main>
+        
+        <h1>Contacto</h1>
+        <div class="contacto">
+            <div class="contacto__form ">  <!-----------FORMULARIO DE CONTACTO--------------> 
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="validationDefault01" class="form-label">Nombre Y Apellido</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault04" class="form-label">Obra Social</label>
+                        <select class="form-select" id="validationDefault04" required>
+                            <option selected disabled value="">Elegir</option>
+                            <option>Gea</option>
+                            <option>Medife</option>
+                            <option>Sancor Salud</option>
+                            <option>Osde</option>
+                            <option>Pami</option>
+                            <option>Apross</option>
+                            <option>Swiss Medical</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault04" class="form-label">Motivo de contacto</label>
+                        <select class="form-select" id="validationDefault04" required>
+                            <option selected disabled value="">Elegir</option>
+                            <option>Consulta</option>
+                            <option>Turno</option>
+                            <option>Presupuesto</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Ingrese su motivo" required></textarea>
+                    </div>
+                    <!----------------------Checkbox-------------->
+                    <div>
+                        <label class="form-check-label" for="inlineCheckbox2">Por cual medio desea obetener una
+                            respuesta?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1" required>Telefono</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2" required>Mail</label>
+                        </div>
+                    </div>
+                    <!----------------------botenes-------------->
+                    <div class="col-12">
+                        <button class="contacto__boton" type="submit">Enviar</button>
+                        <button class="contacto__boton" type="reset" value="Reset">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+                <div class="contacto__ubicacion">  <!-----------UBICACION Y MAPA--------------------->                  
+                    <h2>Nuestras ubicaciones</h2>
+                    <div class="contacto__ubicacion--cont">
+                        <p>Av.Colon 2550,Córdoba.Tel.425-xxx.Lun a Vie. 10 a 18 hs / Sab 9 hs a 13hs</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.371352139113!2d-64.21765288470523!3d-31.40389320279038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298968f4a1871%3A0x1299982b7cc03a7a!2sAv.%20Col%C3%B3n%202550%2C%20X5003DCW%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1627440502554!5m2!1ses-419!2sar"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="contacto__ubicacion--cont">
+                        <p>Av. Amadeo Sabattini 2320,Córdoba.Tel.428-xxx Lun a Vie. 10 a 18 hs</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.3028971812028!2d-64.15727618511127!3d-31.433327181398425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2ceb65f3661%3A0x8de1384a730435f7!2sAv.%20Amadeo%20Sabattini%202320%2C%20X5014AUR%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1632534988224!5m2!1ses!2sar"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <!------------------------------------FOOOTER------------------------------------------------------>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="grillaFooter">
+                        <div class="grillaFooter__logo">
+                            <img src="../media/logo.png" alt="">
+                        </div>
+                        <div class="grillaFooter__socialMedia" data-aos="zoom-out" data-aos-duration="2000">
+                            <a href="#" class="grillaFooter__socialMedia--socialIcono">
+                                <i class='bx bxl-instagram-alt'></i>
+                            </a>
+                            <a href="#" class="grillaFooter__socialMedia--socialIcono">
+                                <i class='bx bxl-facebook-square'></i>
+                            </a>
+                        </div>
+                        <div class="grillaFooter__line"></div>
+                        <p class="grillaFooter__text">Copyright &copyArev Fabi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

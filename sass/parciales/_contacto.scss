@@ -1,0 +1,112 @@
+@import "mediaqueries";
+$ancho: 1400px;
+
+
+.contacto {
+    display: flex;
+
+    @include tablet{
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    @include movil{
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 30px 5px;
+    }
+
+    &__form {
+        height: 80%;
+        padding: 10px;
+        box-shadow: $sombreado;
+        color: rgb(22, 22, 143);
+        font-weight: bold;
+        width: $ancho/2;
+        margin: 10px;
+        border-radius: $borde/4;
+
+       @include tablet{
+            font-size: 1.3rem;
+        } 
+
+        @include movil{
+            width: 380px;
+        }
+
+    }
+
+    &__boton {
+        border-radius: $borde;
+        height: 30px;
+        width: 150px;
+        margin-right: 10px;
+        background: rgb(219, 223, 215);
+        color: rgb(6, 6, 57);
+
+        &:hover {
+
+            background-color: rgb(235, 228, 214);
+            cursor: pointer;
+            font-weight: bolder;
+            font-size: 1rem;
+            animation: pulsate-btnContacto 0.8s ease-in-out infinite both;
+        }
+    }
+
+    &__ubicacion {
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: $sombreado;
+        border-radius: $borde/2;
+        margin: 10px;
+        width: $ancho/2;
+        padding: 10px;
+
+        @include movil {
+            width: 380px;
+        }
+
+        &--cont {
+            display: flex;
+            justify-content: flex-start;
+            margin: 5px;
+
+            @include movil{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            p {
+                text-align: center;
+                margin-top: 80px;
+                font-weight: 800;
+                color: rgb(22, 22, 143);
+                text-shadow: 4px -1px 11px rgba(222, 11, 11, 0.27);
+                padding-right: 10px;
+
+                @include movil{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+
+            }
+
+            iframe {
+                box-shadow:$sombreado;
+                margin-right: 15px;
+
+                @include movil{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

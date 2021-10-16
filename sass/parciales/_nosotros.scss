@@ -1,0 +1,150 @@
+@import "mediaqueries";
+
+$sombreado:0 0 8px 0 rgba(0, 0, 0, .5);
+$fuenteAzul: rgb(24, 33, 99);
+$borde: 20px;
+
+
+
+.banner {
+    margin-bottom: 10px;
+    border-radius: $borde/4;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: $sombreado;
+    animation: color-banNosotros-2x 1s linear infinite alternate both;
+    
+    @include movil{
+        height: 50vh;
+    }
+
+    
+
+    img{
+        height: 80px;
+        @include movil{
+            height: 80px;
+        }
+    }
+
+    &__text {
+        font-weight: bold;
+        margin-right: 30px;
+        padding: 40px 20px 0 10px;
+
+        @include movil{
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+
+    .borde {
+        border-right: rgba(250, 144, 125, 0.448) solid 3px;
+       
+    }
+}
+
+
+.muestrario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;       
+
+    }
+
+    @include movil{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+    }
+
+    
+    &__img1 {
+        grid-area: 1 / 1 / 2 / 2;
+        @include tablet{
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        @include movil {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+    }
+
+    &__img2 {
+        grid-area: 1 / 3 / 2 / 4;
+        @include tablet {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        @include movil {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+    }
+
+    &__img3 {
+        grid-area: 2 / 2 / 3 / 3;
+        @include tablet {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+        @include movil {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+    }
+
+    &__img4 {
+        grid-area: 3 / 1 / 4 / 2;
+        @include tablet {
+            grid-area: 4 / 2 / 5 / 3;
+        }
+        @include movil {
+           display: none;
+        }
+    }
+
+    &__img5 {
+        grid-area: 3 / 3 / 4 / 4;
+        @include tablet {
+            grid-area: 5 / 1 / 6 / 2;
+        }
+        @include movil {
+            display: none;
+        }
+    }
+
+    &__img1,
+    &__img2,
+    &__img3,
+    &__img4,
+    &__img5 {
+        width: 400px;
+        box-shadow: $sombreado;
+        height: 300px;
+        margin: 20px 0;
+
+        @include tablet {
+            width: 330px;
+        }
+
+        @include movil {
+            width: 180px;
+        }
+
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
