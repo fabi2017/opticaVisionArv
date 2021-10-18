@@ -433,6 +433,24 @@ footer {
 }
 
 /*--------------SECCION PRODUCTOS--------*/
+input {
+  margin-left: 300px;
+  margin-bottom: 30px;
+}
+
+label {
+  border: chocolate solid 1px;
+  background-color: coral;
+}
+
+#lentes:checked ~ .galeria > .lentesSol {
+  display: none;
+}
+
+#lentessol:checked ~ .galeria > .lentes {
+  display: none;
+}
+
 .galeria {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,7 +461,7 @@ footer {
       justify-content: space-around;
 }
 
-.galeria__contImag {
+.lentes {
   width: 380px;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
@@ -451,40 +469,85 @@ footer {
   margin-bottom: 60px;
 }
 
-.galeria__contImag img {
+.lentes img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.galeria__contImag h5 {
+.lentes h5 {
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-.galeria__contVideo {
-  padding: 10px 0;
+.lentesSol {
+  width: 380px;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  height: 300px;
+  margin-bottom: 60px;
 }
 
-.galeria__contVideo--video {
-  padding-right: 50px;
-  height: 320px;
+.lentesSol img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  .galeria__contVideo--video {
-    margin-left: 5rem;
-  }
+.lentesSol h5 {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 480px) {
-  .galeria__contVideo--video {
-    height: 13rem;
-    margin-right: 2rem;
-  }
-}
+/* 
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
 
+    &__contImag {
+
+        width: 380px;
+        box-shadow: $sombreado;
+        height: 300px;
+        margin-bottom: 60px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h5 {
+            box-shadow: $sombreado;
+        }
+    }
+
+    &__contVideo {
+        padding: 10px 0;
+
+        &--video {
+            padding-right: 50px;
+            height: 320px;
+
+            @include tablet {
+
+                margin-left: 5rem;
+
+            }
+
+            @include movil{
+                height: 13rem;
+                margin-right: 2rem;
+            }
+        }
+
+
+    }
+} */
 /*-------------SECCION OBRAS SOCIALES--------*/
 .tablaObrasoc {
   width: 100%;

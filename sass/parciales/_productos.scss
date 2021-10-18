@@ -2,10 +2,76 @@
 
 /*--------------SECCION PRODUCTOS--------*/
 
+
+
+    input{
+        margin-left: 300px;
+        margin-bottom: 30px;
+    }
+
+    label {
+        border:chocolate solid 1px;
+        background-color: coral;
+    }
+
+
+    #lentes:checked ~ .galeria>.lentesSol{
+        display: none;
+    }
+    
+    #lentessol:checked ~ .galeria>.lentes{
+        display: none;
+    }
+
+
+
+
 .galeria {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+}
+
+.lentes{
+    width: 380px;
+        box-shadow: $sombreado;
+        height: 300px;
+        margin-bottom: 60px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h5 {
+            box-shadow: $sombreado;
+        }
+}
+
+.lentesSol{
+    width: 380px;
+        box-shadow: $sombreado;
+        height: 300px;
+        margin-bottom: 60px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h5 {
+            box-shadow: $sombreado;
+        }
+}
+
+
+/* 
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
 
     &__contImag {
 
@@ -46,4 +112,4 @@
 
 
     }
-}
+} */

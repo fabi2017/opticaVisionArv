@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!----------------Keywords y Descripcion------------------------->
     <meta name="keywords" content="LENTES, OPTICA, VISIONARV, LENTES DE SOL , ARMAZONES , LENTES RECETADOS, CORDOBA">
-    <meta name="description" content="Somos una óptica con experiencia en  productos de gran calidad. Stock actualizado . Los Mejores Precios del mercado y las mejores marcas. Lentes recetados y Lentes de sol ">
+    <meta name="description"
+        content="Somos una óptica con experiencia en  productos de gran calidad. Stock actualizado . Los Mejores Precios del mercado y las mejores marcas. Lentes recetados y Lentes de sol ">
     <link rel="shortcut icon" href="../media/icon.png">
     <!--Enlace Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -44,7 +45,7 @@
                 <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
                     <ul class="navbar-nav align-items-center barraMenu mt-4">
                         <li>
-                            <a class="nav-link" href="#">Productos</a>                        
+                            <a class="nav-link" href="#">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./obrasociales.html">Obras Sociales</a>
@@ -65,37 +66,49 @@
         <p>Conocé la más amplia variedad de marcas y productos que tenemos para vos.
             Tenemos a tu disposición una amplia variedad de marcas para cumplir con tus más altas expectativas.
             Acercate a nuestro local y elegí lo mejor para vos.</p>
-        <section class="galeria" data-aos="zoom-out-up" data-aos-duration="2500">
-            <div class="galeria__contImag">
-                <img src="../media/armazon1.jpg" alt="">
-                <h5>Marca+modelo</h5>
+        <section>
+            <input type="radio" name="filtro" id="todo" checked>
+            <label for="">Todo</label>
+            <input type="radio" name="filtro" id="lentes">
+            <label for="">Lentes</label>
+            <input type="radio" name="filtro" id="lentessol">
+            <label for="">Lentes de sol</label>
+
+            <div class="galeria" data-aos="zoom-out-up" data-aos-duration="2500">
+                <div class="lentes">
+                    <img src="../media/armazon1.jpg" alt="">
+                    <h5>Marca+modelo</h5>
+                </div>
+                <div class="lentes">
+                    <img src="../media/armazon2.jpg" alt="">
+                    <h5>Marca+modelo</h5>
+                </div>
+                <div class="lentes">
+                    <img src="../media/armazon3.jpg" alt="">
+                    <h5>Marca+modelo</h5>
+                </div>
+                <div class="lentesSol">
+                    <img src="../media/sol.jpg" alt="">
+                    <h5>Marca+modelo</h5>
+                </div>
+                <div class="lentesSol">
+                    <img src="../media/sol2.jpg" alt="">
+                    <h5>Marca+modelo</h5>
+                </div>
+                <div class="lentesSol">
+                    <img src="../media/sol3.jpg" alt="">
+                    <h5>Marca+modelo</h5>
+                </div>
+              
             </div>
-            <div class="galeria__contImag">
-                <img src="../media/armazon2.jpg" alt="">
-                <h5>Marca+modelo</h5>
-            </div>
-            <div class="galeria__contImag">
-                <img src="../media/armazon3.jpg" alt="">
-                <h5>Marca+modelo</h5>
-            </div>
-            <div class="galeria__contImag">
-                <img src="../media/sol.jpg" alt="">
-                <h5>Marca+modelo</h5>
-            </div> <div class="galeria__contImag">
-                <img src="../media/sol2.jpg" alt="">
-                <h5>Marca+modelo</h5>
-            </div> <div class="galeria__contImag">
-                <img src="../media/sol3.jpg" alt="">
-                <h5>Marca+modelo</h5>
-            </div>
-            <div class="galeria__contVideo" data-aos="zoom-in-up" data-aos-duration="2500">
+            <div class="galeria__contVideo" data-aos="zoom-in-up" data-aos-duration="2000">
                 <video class="galeria__contVideo--video" src="../media/lentes.mp4" controls></video>
                 <video class="galeria__contVideo--video" src="../media/soles.mp4" controls></video>
             </div>
         </section>
-        
+
     </main>
-    <footer >
+    <footer>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 col-md-12">
