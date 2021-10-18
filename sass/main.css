@@ -433,12 +433,11 @@ footer {
 }
 
 /*--------------SECCION PRODUCTOS--------*/
-input {
-  margin-left: 300px;
-  margin-bottom: 30px;
+.btn {
+  margin-left: 250px;
 }
 
-label {
+.lblProd {
   border: chocolate solid 1px;
   background-color: coral;
 }
@@ -448,6 +447,14 @@ label {
 }
 
 #lentessol:checked ~ .galeria > .lentes {
+  display: none;
+}
+
+#btnradio2:checked ~ .galeria > .lentesSol {
+  display: none;
+}
+
+#btnradio3:checked ~ .galeria > .lentes {
   display: none;
 }
 
@@ -501,53 +508,29 @@ label {
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* 
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   
+.contVideo {
+  padding: 10px 0;
+  margin-left: 120px;
+}
 
-    &__contImag {
+.contVideo--video {
+  padding-right: 50px;
+  height: 320px;
+}
 
-        width: 380px;
-        box-shadow: $sombreado;
-        height: 300px;
-        margin-bottom: 60px;
+@media screen and (max-width: 768px) {
+  .contVideo--video {
+    margin-left: 5rem;
+  }
+}
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+@media screen and (max-width: 480px) {
+  .contVideo--video {
+    height: 13rem;
+    margin-right: 2rem;
+  }
+}
 
-        h5 {
-            box-shadow: $sombreado;
-        }
-    }
-
-    &__contVideo {
-        padding: 10px 0;
-
-        &--video {
-            padding-right: 50px;
-            height: 320px;
-
-            @include tablet {
-
-                margin-left: 5rem;
-
-            }
-
-            @include movil{
-                height: 13rem;
-                margin-right: 2rem;
-            }
-        }
-
-
-    }
-} */
 /*-------------SECCION OBRAS SOCIALES--------*/
 .tablaObrasoc {
   width: 100%;
