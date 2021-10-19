@@ -197,6 +197,7 @@ footer {
             border-radius: $borde+10;
             text-align: center;
             color: rgb(242, 94, 94);
+            animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both;
 
             @include tablet {
                 width: 100px;
@@ -205,6 +206,7 @@ footer {
                 border-radius: 45%;
                 text-align: center;
                 color: rgb(242, 94, 94);
+                animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both
 
             }
 

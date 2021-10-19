@@ -208,6 +208,8 @@ footer {
   border-radius: 30px;
   text-align: center;
   color: #f25e5e;
+  -webkit-animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
+          animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
 }
 
 @media screen and (max-width: 768px) {
@@ -218,6 +220,8 @@ footer {
     border-radius: 45%;
     text-align: center;
     color: #f25e5e;
+    -webkit-animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
+            animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
   }
 }
 
@@ -522,6 +526,8 @@ footer {
 .contVideo--video {
   padding-right: 50px;
   height: 320px;
+  -webkit-animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
+          animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
 }
 
 @media screen and (max-width: 480px) {
@@ -1079,11 +1085,15 @@ body h1 {
           text-decoration: underline rgba(250, 144, 125, 0.605) solid 3px;
   padding-top: 20px;
   font-family: 'Overlock', cursive;
+  -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 @media screen and (max-width: 768px) {
   body h1 {
     font-size: 2.5rem;
+    -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+            animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
 }
 
@@ -1223,6 +1233,92 @@ body ul {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+
+/*-----Se usa en los iconos del footer-------*/
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*-----Se us en los videos de productos------*/
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+/*----Se usa en los titulos-------*/
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
