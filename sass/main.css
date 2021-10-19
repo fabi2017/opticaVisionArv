@@ -472,12 +472,42 @@ footer {
       justify-content: space-around;
 }
 
+.galeria__contVideo {
+  padding: 10px 0;
+  margin-left: 120px;
+}
+
+@media screen and (max-width: 480px) {
+  .galeria__contVideo {
+    margin-left: 10px;
+  }
+}
+
+.galeria__contVideo--video {
+  padding-right: 50px;
+  height: 320px;
+  -webkit-animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
+          animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
+}
+
+@media screen and (max-width: 480px) {
+  .galeria__contVideo--video {
+    height: 13rem;
+  }
+}
+
 .lentes {
   width: 320px;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
   height: 300px;
   margin-bottom: 60px;
+}
+
+.lentes:hover {
+  z-index: 1;
+  -webkit-animation: kenburns-top 3s ease-out both;
+          animation: kenburns-top 3s ease-out both;
 }
 
 .lentes img {
@@ -488,8 +518,10 @@ footer {
 }
 
 .lentes h5 {
+  text-align: center;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  background-color: #feced3;
 }
 
 .lentesSol {
@@ -500,6 +532,12 @@ footer {
   margin-bottom: 60px;
 }
 
+.lentesSol:hover {
+  z-index: 1;
+  -webkit-animation: kenburns-top 3s ease-out both;
+          animation: kenburns-top 3s ease-out both;
+}
+
 .lentesSol img {
   height: 100%;
   width: 100%;
@@ -508,32 +546,10 @@ footer {
 }
 
 .lentesSol h5 {
+  text-align: center;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
-}
-
-.contVideo {
-  padding: 10px 0;
-  margin-left: 120px;
-}
-
-@media screen and (max-width: 480px) {
-  .contVideo {
-    margin-left: 10px;
-  }
-}
-
-.contVideo--video {
-  padding-right: 50px;
-  height: 320px;
-  -webkit-animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
-          animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
-}
-
-@media screen and (max-width: 480px) {
-  .contVideo--video {
-    height: 13rem;
-  }
+  background-color: #feced3;
 }
 
 /*-------------SECCION OBRAS SOCIALES--------*/
@@ -1319,6 +1335,36 @@ body ul {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -6,12 +6,13 @@
 
 .btn {
     margin-left: 250px;
-    @include tablet{
+
+    @include tablet {
         font-size: 1.8rem;
         margin-left: 80px;
     }
 
-    @include movil{
+    @include movil {
         font-size: 1.5rem;
     }
 }
@@ -32,6 +33,28 @@
     flex-wrap: wrap;
     justify-content: space-around;
 
+
+    &__contVideo {
+        padding: 10px 0;
+        margin-left: 120px;
+
+        @include movil {
+            margin-left: 10px;
+        }
+
+        &--video {
+            padding-right: 50px;
+            height: 320px;
+            animation: fade-in-fwd 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+
+
+            @include movil {
+                height: 13rem;
+
+            }
+        }
+    }
+
 }
 
 .lentes {
@@ -40,6 +63,11 @@
     height: 300px;
     margin-bottom: 60px;
 
+    &:hover {
+        z-index: 1;
+        animation: kenburns-top 3s ease-out both;
+    }
+
     img {
         height: 100%;
         width: 100%;
@@ -47,7 +75,9 @@
     }
 
     h5 {
+        text-align: center;
         box-shadow: $sombreado;
+        background-color: rgb(254, 206, 211);
     }
 }
 
@@ -57,37 +87,23 @@
     height: 300px;
     margin-bottom: 60px;
 
+    &:hover {
+        z-index: 1;
+        animation: kenburns-top 3s ease-out both;
+    }
+
     img {
         height: 100%;
         width: 100%;
         object-fit: cover;
+
+
     }
 
     h5 {
+        text-align: center;
         box-shadow: $sombreado;
+        background-color: rgb(254, 206, 211);
+
     }
-}
-
-
-.contVideo {
-    padding: 10px 0;
-    margin-left: 120px;
-
-    @include movil{
-        margin-left: 10px;
-    }
-
-    &--video {
-        padding-right: 50px;
-        height: 320px;
-        animation: fade-in-fwd 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
-
-        
-        @include movil {
-            height: 13rem;
-           
-        }
-    }
-
-
 }
