@@ -462,6 +462,10 @@ footer {
   display: none;
 }
 
+.fondoProd {
+  background-color: chocolate;
+}
+
 .galeria {
   display: -webkit-box;
   display: -ms-flexbox;
