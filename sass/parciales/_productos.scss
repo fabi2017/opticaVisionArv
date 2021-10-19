@@ -4,31 +4,26 @@
 
 
 
-    .btn{
-        margin-left: 250px;
+.btn {
+    margin-left: 250px;
+    @include tablet{
+        font-size: 1.8rem;
+        margin-left: 80px;
     }
 
-    .lblProd {
-        border:chocolate solid 1px;
-        background-color: coral;
+    @include movil{
+        font-size: 1.5rem;
     }
+}
 
 
-    #lentes:checked ~ .galeria>.lentesSol{
-        display: none;
-    }
-    
-    #lentessol:checked ~ .galeria>.lentes{
-        display: none;
-    }
+#btnradio2:checked~.galeria>.lentesSol {
+    display: none;
+}
 
-
-    #btnradio2:checked ~ .galeria>.lentesSol{
-        display: none;
-    }
-    #btnradio3:checked ~ .galeria>.lentes{
-        display: none;
-    }
+#btnradio3:checked~.galeria>.lentes {
+    display: none;
+}
 
 
 
@@ -39,36 +34,38 @@
 
 }
 
-.lentes{
-    width: 380px;
-        box-shadow: $sombreado;
-        height: 300px;
-        margin-bottom: 60px;
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+.lentes {
+    width: 320px;
+    box-shadow: $sombreado;
+    height: 300px;
+    margin-bottom: 60px;
 
-        h5 {
-            box-shadow: $sombreado;
-        }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h5 {
+        box-shadow: $sombreado;
+    }
 }
 
-.lentesSol{
-    width: 380px;
-        box-shadow: $sombreado;
-        height: 300px;
-        margin-bottom: 60px;
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+.lentesSol {
+    width: 320px;
+    box-shadow: $sombreado;
+    height: 300px;
+    margin-bottom: 60px;
 
-        h5 {
-            box-shadow: $sombreado;
-        }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h5 {
+        box-shadow: $sombreado;
+    }
 }
 
 
@@ -76,19 +73,18 @@
     padding: 10px 0;
     margin-left: 120px;
 
+    @include movil{
+        margin-left: 10px;
+    }
+
     &--video {
         padding-right: 50px;
         height: 320px;
 
-        @include tablet {
-
-            margin-left: 5rem;
-
-        }
-
-        @include movil{
+        
+        @include movil {
             height: 13rem;
-            margin-right: 2rem;
+           
         }
     }
 

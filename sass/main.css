@@ -207,24 +207,24 @@ footer {
   border: 2px solid #e11515;
   border-radius: 30px;
   text-align: center;
-  color: #fff;
+  color: #f25e5e;
 }
 
 @media screen and (max-width: 768px) {
   .grillaFooter__socialMedia--socialIcono {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border: 2px solid #e11515;
     border-radius: 45%;
     text-align: center;
-    color: #fff;
+    color: #f25e5e;
   }
 }
 
 @media screen and (max-width: 480px) {
   .grillaFooter__socialMedia--socialIcono {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -242,15 +242,15 @@ footer {
 
 @media screen and (max-width: 768px) {
   .grillaFooter__socialMedia--socialIcono i {
-    font-size: 5rem;
-    line-height: 110px;
+    font-size: 4rem;
+    line-height: 100px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .grillaFooter__socialMedia--socialIcono i {
-    font-size: 4rem;
-    line-height: 110px;
+    font-size: 3rem;
+    line-height: 80px;
   }
 }
 
@@ -437,17 +437,17 @@ footer {
   margin-left: 250px;
 }
 
-.lblProd {
-  border: chocolate solid 1px;
-  background-color: coral;
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 1.8rem;
+    margin-left: 80px;
+  }
 }
 
-#lentes:checked ~ .galeria > .lentesSol {
-  display: none;
-}
-
-#lentessol:checked ~ .galeria > .lentes {
-  display: none;
+@media screen and (max-width: 480px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
 
 #btnradio2:checked ~ .galeria > .lentesSol {
@@ -469,7 +469,7 @@ footer {
 }
 
 .lentes {
-  width: 380px;
+  width: 320px;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
   height: 300px;
@@ -489,7 +489,7 @@ footer {
 }
 
 .lentesSol {
-  width: 380px;
+  width: 320px;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
   height: 300px;
@@ -513,21 +513,20 @@ footer {
   margin-left: 120px;
 }
 
+@media screen and (max-width: 480px) {
+  .contVideo {
+    margin-left: 10px;
+  }
+}
+
 .contVideo--video {
   padding-right: 50px;
   height: 320px;
 }
 
-@media screen and (max-width: 768px) {
-  .contVideo--video {
-    margin-left: 5rem;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .contVideo--video {
     height: 13rem;
-    margin-right: 2rem;
   }
 }
 

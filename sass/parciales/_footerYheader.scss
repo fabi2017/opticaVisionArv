@@ -196,21 +196,21 @@ footer {
             border: 2px solid rgb(225, 21, 21);
             border-radius: $borde+10;
             text-align: center;
-            color: #fff;
+            color: rgb(242, 94, 94);
 
             @include tablet {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
                 border: 2px solid rgb(225, 21, 21);
                 border-radius: 45%;
                 text-align: center;
-                color: #fff;
+                color: rgb(242, 94, 94);
 
             }
 
             @include movil {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
             }
 
             &:hover {
@@ -224,13 +224,13 @@ footer {
                 line-height: 55px;
 
                 @include tablet {
-                    font-size: 5rem;
-                    line-height: 110px;
+                    font-size: 4rem;
+                    line-height: 100px;
                 }
 
                 @include movil {
-                    font-size: 4rem;
-                    line-height: 110px;
+                    font-size: 3rem;
+                    line-height: 80px;
                 }
             }
         }
