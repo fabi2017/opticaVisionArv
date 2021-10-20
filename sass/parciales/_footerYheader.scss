@@ -63,7 +63,7 @@ header {
             display: flex;
             text-decoration: none;
             width: 10rem;
-        }     
+        }
 
         .nav-link {
             @include tablet {
@@ -103,7 +103,7 @@ header {
         object-fit: cover;
     }
 
-   
+
 }
 
 
@@ -143,6 +143,126 @@ footer {
 
 }
 
+
+.grillaFoot {
+    display: grid;
+    grid-template-columns:0.7fr 1.3fr 1fr;
+    grid-template-rows: 1fr;
+    border: blueviolet solid 1px;
+    grid-template-areas:
+        "direc iconos sec";
+
+    &__direc {
+        grid-area: direc;
+
+
+        p{
+            color: $fuenteAzul;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    &__iconos {
+        grid-area: iconos;
+        border: yellow solid 1px;
+        
+       
+        img {
+            height: 7rem;
+            padding-left: 200px;
+
+        }
+
+
+    }
+
+    &__sec {
+
+        border: black solid 1px;
+        grid-area: sec;
+        display: flex;
+        justify-content: center;
+        
+
+        li {
+            list-style: none;
+            margin: 30px;
+            a{
+                text-decoration: none;
+                color: $fuenteAzul;
+                font-weight: bold;
+                
+            }
+            
+        }
+
+    }
+}
+
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    &__socialIcono {
+        margin-left: 20px;
+        margin-bottom: 10px;
+        width: 60px;
+        height: 60px;
+        border: 2px solid rgb(225, 21, 21);
+        border-radius: $borde+10;
+        color: rgb(242, 94, 94);
+        animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both;
+       
+        &:hover {
+            background: rgb(201, 124, 124);
+            color: rgb(6, 6, 165);
+        }
+    
+        i {
+            font-size: 2.5rem;
+            line-height: 55px;
+            padding-left: 8px;
+    
+            @include tablet {
+                font-size: 4rem;
+                line-height: 100px;
+            }
+    
+            @include movil {
+                font-size: 3rem;
+                line-height: 80px;
+            }
+        }
+    
+    }
+
+   
+
+}
+
+
+.text {
+    text-align: center;
+}
+
+.line {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    height: 1px;
+    background: tomato;
+    box-shadow: $sombreado;
+
+    @include tablet {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* 
 .grillaFooter {
     display: grid;
     grid-template-columns: 1fr;
@@ -255,4 +375,4 @@ footer {
             max-width: 600px;
         }
     }
-}
+} */

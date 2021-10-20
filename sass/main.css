@@ -133,20 +133,46 @@ footer {
   }
 }
 
-.grillaFooter {
+.grillaFoot {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr, 1fr, 1fr, 1fr;
-      grid-template-rows: 1fr, 1fr, 1fr, 1fr;
-  gap: 5px 0px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-columns: 0.7fr 1.3fr 1fr;
+      grid-template-columns: 0.7fr 1.3fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  border: blueviolet solid 1px;
+      grid-template-areas: "direc iconos sec";
 }
 
-.grillaFooter__logo {
+.grillaFoot__direc {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: direc;
+}
+
+.grillaFoot__direc p {
+  color: #182163;
+  font-weight: bold;
+  text-align: center;
+}
+
+.grillaFoot__iconos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: iconos;
+  border: yellow solid 1px;
+}
+
+.grillaFoot__iconos img {
+  height: 7rem;
+  padding-left: 200px;
+}
+
+.grillaFoot__sec {
+  border: black solid 1px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: sec;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,25 +181,18 @@ footer {
           justify-content: center;
 }
 
-.grillaFooter__logo img {
-  height: 7rem;
+.grillaFoot__sec li {
+  list-style: none;
+  margin: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .grillaFooter__logo img {
-    height: 60%;
-    padding-right: 60px;
-  }
+.grillaFoot__sec li a {
+  text-decoration: none;
+  color: #182163;
+  font-weight: bold;
 }
 
-@media screen and (max-width: 480px) {
-  .grillaFooter__logo img {
-    height: 50%;
-    padding-right: 60px;
-  }
-}
-
-.grillaFooter__socialMedia {
+.socialMedia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,86 +204,50 @@ footer {
           align-items: flex-end;
 }
 
-@media screen and (max-width: 768px) {
-  .grillaFooter__socialMedia {
-    height: 160px;
-    padding-bottom: 50px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .grillaFooter__socialMedia {
-    height: 100px;
-    padding-bottom: 50px;
-  }
-}
-
-.grillaFooter__socialMedia--socialIcono {
+.socialMedia__socialIcono {
   margin-left: 20px;
   margin-bottom: 10px;
   width: 60px;
   height: 60px;
   border: 2px solid #e11515;
   border-radius: 30px;
-  text-align: center;
   color: #f25e5e;
   -webkit-animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
           animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
 }
 
-@media screen and (max-width: 768px) {
-  .grillaFooter__socialMedia--socialIcono {
-    width: 100px;
-    height: 100px;
-    border: 2px solid #e11515;
-    border-radius: 45%;
-    text-align: center;
-    color: #f25e5e;
-    -webkit-animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
-            animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .grillaFooter__socialMedia--socialIcono {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.grillaFooter__socialMedia--socialIcono:hover {
+.socialMedia__socialIcono:hover {
   background: #c97c7c;
   color: #0606a5;
-  -webkit-transform: translate(5px, 5px);
-          transform: translate(5px, 5px);
 }
 
-.grillaFooter__socialMedia--socialIcono i {
+.socialMedia__socialIcono i {
   font-size: 2.5rem;
   line-height: 55px;
+  padding-left: 8px;
 }
 
 @media screen and (max-width: 768px) {
-  .grillaFooter__socialMedia--socialIcono i {
+  .socialMedia__socialIcono i {
     font-size: 4rem;
     line-height: 100px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .grillaFooter__socialMedia--socialIcono i {
+  .socialMedia__socialIcono i {
     font-size: 3rem;
     line-height: 80px;
   }
 }
 
-.grillaFooter__text {
+.text {
   text-align: center;
 }
 
-.grillaFooter__line {
+.line {
   width: 100%;
-  max-width: 1200px;
+  max-width: 600px;
   margin: auto;
   height: 1px;
   background: tomato;
@@ -273,12 +256,126 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .grillaFooter__line {
+  .line {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
   }
 }
 
+/* 
+.grillaFooter {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    gap: 5px 0px;
+    justify-content: center;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 7rem;
+
+            @include tablet {
+                height: 60%;
+                padding-right: 60px;
+            }
+
+            @include movil {
+                height: 50%;
+                padding-right: 60px;
+            }
+        }
+    }
+
+    &__socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        @include tablet {
+            height: 160px;
+            padding-bottom: 50px;
+
+
+        }
+
+        @include movil {
+            height: 100px;
+            padding-bottom: 50px;
+
+        }
+
+
+        &--socialIcono {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgb(225, 21, 21);
+            border-radius: $borde+10;
+            text-align: center;
+            color: rgb(242, 94, 94);
+            animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both;
+
+            @include tablet {
+                width: 100px;
+                height: 100px;
+                border: 2px solid rgb(225, 21, 21);
+                border-radius: 45%;
+                text-align: center;
+                color: rgb(242, 94, 94);
+                animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both
+
+            }
+
+            @include movil {
+                width: 80px;
+                height: 80px;
+            }
+
+            &:hover {
+                background: rgb(201, 124, 124);
+                color: rgb(6, 6, 165);
+                transform: translate(5px, 5px);
+            }
+
+            i {
+                font-size: 2.5rem;
+                line-height: 55px;
+
+                @include tablet {
+                    font-size: 4rem;
+                    line-height: 100px;
+                }
+
+                @include movil {
+                    font-size: 3rem;
+                    line-height: 80px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__line {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        height: 1px;
+        background: tomato;
+        box-shadow: $sombreado;
+
+        @include tablet {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+} */
 /*-----------PRINCIPAL-----------*/
 .grilla {
   display: -ms-grid;
@@ -460,10 +557,6 @@ footer {
 
 #btnradio3:checked ~ .galeria > .lentes {
   display: none;
-}
-
-.fondoProd {
-  background-color: chocolate;
 }
 
 .galeria {
