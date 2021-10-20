@@ -125,7 +125,7 @@ footer {
 
 @media screen and (max-width: 480px) {
   footer {
-    height: 35vh;
+    height: 45vh;
     padding-top: 5px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -140,27 +140,68 @@ footer {
       grid-template-columns: 0.7fr 1.3fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  border: blueviolet solid 1px;
       grid-template-areas: "direc iconos sec";
+}
+
+@media screen and (max-width: 768px) {
+  .grillaFoot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .grillaFoot__direc {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: direc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.grillaFoot__direc p {
-  color: #182163;
-  font-weight: bold;
+.grillaFoot__direc i {
+  font-size: 1.3rem;
   text-align: center;
+  color: #182163;
+}
+
+@media screen and (max-width: 768px) {
+  .grillaFoot__direc i {
+    font-size: 2rem;
+  }
+}
+
+.grillaFoot__direc i p {
+  color: #e11515;
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .grillaFoot__direc i p {
+    font-size: 1.5rem;
+  }
 }
 
 .grillaFoot__iconos {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: iconos;
-  border: yellow solid 1px;
 }
 
 .grillaFoot__iconos img {
@@ -168,28 +209,57 @@ footer {
   padding-left: 200px;
 }
 
+@media screen and (max-width: 768px) {
+  .grillaFoot__iconos img {
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grillaFoot__iconos img {
+    height: 6rem;
+    padding: 0 0 0 50px;
+    margin: 20px 0;
+  }
+}
+
 .grillaFoot__sec {
-  border: black solid 1px;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: sec;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20px;
 }
 
-.grillaFoot__sec li {
-  list-style: none;
-  margin: 30px;
-}
-
-.grillaFoot__sec li a {
-  text-decoration: none;
+.grillaFoot__sec i {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-left: 120px;
   color: #182163;
+}
+
+.grillaFoot__sec a {
+  color: #e11515;
   font-weight: bold;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-family: 'Play', sans-serif;
+}
+
+.grillaFoot__sec a:hover {
+  color: #182163;
+}
+
+@media screen and (max-width: 768px) {
+  .grillaFoot__sec {
+    display: none;
+  }
 }
 
 .socialMedia {
@@ -216,6 +286,22 @@ footer {
           animation: scale-in-center 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s 1 both;
 }
 
+@media screen and (max-width: 768px) {
+  .socialMedia__socialIcono {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .socialMedia__socialIcono {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+  }
+}
+
 .socialMedia__socialIcono:hover {
   background: #c97c7c;
   color: #0606a5;
@@ -229,20 +315,28 @@ footer {
 
 @media screen and (max-width: 768px) {
   .socialMedia__socialIcono i {
-    font-size: 4rem;
-    line-height: 100px;
+    font-size: 3.5rem;
+    line-height: 80px;
+    padding-left: 8px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .socialMedia__socialIcono i {
-    font-size: 3rem;
-    line-height: 80px;
+    font-size: 2.6rem;
+    line-height: 65px;
+    padding-left: 12px;
   }
 }
 
 .text {
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .text {
+    font-size: 1.5rem;
+  }
 }
 
 .line {
@@ -258,124 +352,10 @@ footer {
 @media screen and (max-width: 768px) {
   .line {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
   }
 }
 
-/* 
-.grillaFooter {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
-    gap: 5px 0px;
-    justify-content: center;
-
-    &__logo {
-        display: flex;
-        justify-content: center;
-
-        img {
-            height: 7rem;
-
-            @include tablet {
-                height: 60%;
-                padding-right: 60px;
-            }
-
-            @include movil {
-                height: 50%;
-                padding-right: 60px;
-            }
-        }
-    }
-
-    &__socialMedia {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-
-        @include tablet {
-            height: 160px;
-            padding-bottom: 50px;
-
-
-        }
-
-        @include movil {
-            height: 100px;
-            padding-bottom: 50px;
-
-        }
-
-
-        &--socialIcono {
-            margin-left: 20px;
-            margin-bottom: 10px;
-            width: 60px;
-            height: 60px;
-            border: 2px solid rgb(225, 21, 21);
-            border-radius: $borde+10;
-            text-align: center;
-            color: rgb(242, 94, 94);
-            animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both;
-
-            @include tablet {
-                width: 100px;
-                height: 100px;
-                border: 2px solid rgb(225, 21, 21);
-                border-radius: 45%;
-                text-align: center;
-                color: rgb(242, 94, 94);
-                animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both
-
-            }
-
-            @include movil {
-                width: 80px;
-                height: 80px;
-            }
-
-            &:hover {
-                background: rgb(201, 124, 124);
-                color: rgb(6, 6, 165);
-                transform: translate(5px, 5px);
-            }
-
-            i {
-                font-size: 2.5rem;
-                line-height: 55px;
-
-                @include tablet {
-                    font-size: 4rem;
-                    line-height: 100px;
-                }
-
-                @include movil {
-                    font-size: 3rem;
-                    line-height: 80px;
-                }
-            }
-        }
-    }
-
-    &__text {
-        text-align: center;
-    }
-
-    &__line {
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        height: 1px;
-        background: tomato;
-        box-shadow: $sombreado;
-
-        @include tablet {
-            width: 100%;
-            max-width: 600px;
-        }
-    }
-} */
 /*-----------PRINCIPAL-----------*/
 .grilla {
   display: -ms-grid;
@@ -431,9 +411,11 @@ footer {
 
 .grilla__catalogoPrin--img {
   border-radius: 50px;
-  padding-right: 10px;
+  margin-right: 30px;
   height: 220px;
-  padding-bottom: 10px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 1px 2px 10px 1px rgba(242, 161, 161, 0.89);
+          box-shadow: 1px 2px 10px 1px rgba(242, 161, 161, 0.89);
 }
 
 .grilla__banner {

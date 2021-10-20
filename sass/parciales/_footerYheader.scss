@@ -2,6 +2,8 @@
 $sombreado:0 0 8px 0 rgba(0, 0, 0, .5);
 $fuenteAzul: rgb(24, 33, 99);
 $borde: 20px;
+$fuentePrincipal:'Play',
+sans-serif;
 
 
 /*----------HEADER--------*/
@@ -133,7 +135,7 @@ footer {
     }
 
     @include movil {
-        height: 35vh;
+        height: 45vh;
         padding-top: 5px;
         overflow-x: hidden;
         overflow-y: hidden;
@@ -144,68 +146,145 @@ footer {
 }
 
 
+
+
+
+
+
+
 .grillaFoot {
     display: grid;
-    grid-template-columns:0.7fr 1.3fr 1fr;
+    grid-template-columns: 0.7fr 1.3fr 1fr;
     grid-template-rows: 1fr;
-    border: blueviolet solid 1px;
     grid-template-areas:
         "direc iconos sec";
 
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+   
+
     &__direc {
         grid-area: direc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
 
-        p{
-            color: $fuenteAzul;
-            font-weight: bold;
+        i {
+
+            font-size: 1.3rem;
             text-align: center;
+            color: $fuenteAzul;
+
+            @include tablet{
+                font-size: 2rem;
+            }
+
+            p {
+                color: rgb(225, 21, 21);
+                font-family: 'Play', sans-serif;
+                font-weight: bold;
+                font-size: 1rem;
+                @include tablet{
+                    font-size: 1.5rem;
+                }
+            }
+
+           
         }
     }
 
+
+
     &__iconos {
         grid-area: iconos;
-        border: yellow solid 1px;
-        
+
+      
        
+
         img {
             height: 7rem;
             padding-left: 200px;
 
+            @include tablet{
+                height: 8rem;
+            }
+
+            @include movil{
+                
+                height: 6rem;
+                padding: 0 0 0 50px;
+                margin: 20px 0 ;
+            }
+
         }
+
+
 
 
     }
 
     &__sec {
 
-        border: black solid 1px;
         grid-area: sec;
         display: flex;
-        justify-content: center;
-        
+        flex-direction: column;
+        padding-top: 20px;
 
-        li {
-            list-style: none;
-            margin: 30px;
-            a{
-                text-decoration: none;
-                color: $fuenteAzul;
-                font-weight: bold;
-                
-            }
-            
+
+        i {
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-left: 120px;
+            color: $fuenteAzul;
+
         }
 
+        a {
+
+            color: rgb(225, 21, 21);
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 1rem;
+            font-family: 'Play', sans-serif;
+
+            &:hover {
+                color: $fuenteAzul;
+            }
+
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+
     }
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
 
 
 .socialMedia {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    
+
     &__socialIcono {
         margin-left: 20px;
         margin-bottom: 10px;
@@ -215,37 +294,55 @@ footer {
         border-radius: $borde+10;
         color: rgb(242, 94, 94);
         animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both;
-       
+
+        @include tablet{
+            width: 80px;
+        height: 80px;
+        border-radius: $borde+20;
+        }
+
+        @include movil{
+            width: 70px;
+        height: 70px;
+        border-radius: $borde+20;
+        }
+
         &:hover {
             background: rgb(201, 124, 124);
             color: rgb(6, 6, 165);
         }
-    
+
         i {
             font-size: 2.5rem;
             line-height: 55px;
             padding-left: 8px;
-    
+
             @include tablet {
-                font-size: 4rem;
-                line-height: 100px;
-            }
-    
-            @include movil {
-                font-size: 3rem;
+                font-size: 3.5rem;
                 line-height: 80px;
+            padding-left: 8px;
+            }
+
+            @include movil {
+                font-size: 2.6rem;
+                line-height: 65px;
+                padding-left: 12px;
             }
         }
-    
+
     }
 
-   
+
 
 }
 
 
 .text {
     text-align: center;
+    @include movil {
+        font-size: 1.5rem;
+    }
+
 }
 
 .line {
@@ -258,121 +355,6 @@ footer {
 
     @include tablet {
         width: 100%;
-        max-width: 300px;
+        max-width: 500px;
     }
 }
-
-/* 
-.grillaFooter {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
-    gap: 5px 0px;
-    justify-content: center;
-
-    &__logo {
-        display: flex;
-        justify-content: center;
-
-        img {
-            height: 7rem;
-
-            @include tablet {
-                height: 60%;
-                padding-right: 60px;
-            }
-
-            @include movil {
-                height: 50%;
-                padding-right: 60px;
-            }
-        }
-    }
-
-    &__socialMedia {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-
-        @include tablet {
-            height: 160px;
-            padding-bottom: 50px;
-
-
-        }
-
-        @include movil {
-            height: 100px;
-            padding-bottom: 50px;
-
-        }
-
-
-        &--socialIcono {
-            margin-left: 20px;
-            margin-bottom: 10px;
-            width: 60px;
-            height: 60px;
-            border: 2px solid rgb(225, 21, 21);
-            border-radius: $borde+10;
-            text-align: center;
-            color: rgb(242, 94, 94);
-            animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both;
-
-            @include tablet {
-                width: 100px;
-                height: 100px;
-                border: 2px solid rgb(225, 21, 21);
-                border-radius: 45%;
-                text-align: center;
-                color: rgb(242, 94, 94);
-                animation: scale-in-center 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s 1 both
-
-            }
-
-            @include movil {
-                width: 80px;
-                height: 80px;
-            }
-
-            &:hover {
-                background: rgb(201, 124, 124);
-                color: rgb(6, 6, 165);
-                transform: translate(5px, 5px);
-            }
-
-            i {
-                font-size: 2.5rem;
-                line-height: 55px;
-
-                @include tablet {
-                    font-size: 4rem;
-                    line-height: 100px;
-                }
-
-                @include movil {
-                    font-size: 3rem;
-                    line-height: 80px;
-                }
-            }
-        }
-    }
-
-    &__text {
-        text-align: center;
-    }
-
-    &__line {
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        height: 1px;
-        background: tomato;
-        box-shadow: $sombreado;
-
-        @include tablet {
-            width: 100%;
-            max-width: 600px;
-        }
-    }
-} */
