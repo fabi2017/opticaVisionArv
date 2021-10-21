@@ -56,6 +56,11 @@
             width: 100%;
         }
 
+        @include movil {
+           
+            margin-right: 30px;
+            height: 400px;
+        }
        
 
         &--titulo {
