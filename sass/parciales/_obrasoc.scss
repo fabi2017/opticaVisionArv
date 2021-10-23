@@ -10,8 +10,18 @@
     margin-bottom: 20px;
     border-radius: 5px;
 
+    @include movil {
+        border: rgb(71, 19, 139) solid 1px;
+        width: 300px;
+        box-shadow: none;
+    }
+
     ul {
         list-style: none;
+
+        @include movil {            
+            padding: 0;
+        }
 
         li {
             color: rgb(81, 111, 21);
@@ -21,6 +31,10 @@
             @include tablet {
                 font-size: 1.2rem;
             }
+
+            @include movil {
+                font-size: 1rem;
+            }
         }
     }
 
@@ -28,7 +42,14 @@
         border: 1px solid #000000;
         text-align: center;
         padding: 10px;
-        font-size: 15px;
+        font-size: 1rem;
+
+        @include movil {
+            padding-right: 5px;
+            margin: 0;
+            border: 1px solid black;
+            font-size: 0.5rem;
+        }
     }
 
     &__cabecera {
@@ -42,23 +63,32 @@
             font-weight: bold;
             color: #ffffff;
             animation: color-change-2x 2s linear infinite alternate both;
-            @include tablet{
+
+            @include tablet {
                 font-size: 1.3rem;
             }
+            @include movil {
+                font-size: 1rem;
+            }
         }
-
-
     }
 
 
     &__fila {
         background-color: white;
 
+        @include movil {
+            width: 50px;
+        }
+
         td {
             color: $fuenteAzul;
             font-weight: bold;
-            @include tablet{
+            @include tablet {
                 font-size: 1.3rem;
+            }
+            @include movil {
+                font-size: 1rem;
             }
         }
     }
@@ -69,8 +99,11 @@
         td {
             color: rgb(79, 6, 147);
             font-weight: bold;
-            @include tablet{
+            @include tablet {
                 font-size: 1.3rem;
+            }
+            @include movil {
+                font-size: 1rem;
             }
         }
     }
@@ -88,7 +121,7 @@
 
     @include movil {
         margin-bottom: 10px;
-        margin-left: 10px;
+
     }
 
     img {
@@ -96,7 +129,8 @@
         padding-right: 20px;
 
         @include movil {
-            height: 60px;
+            height: 40px;
+            margin-left: 10px;
         }
     }
 }

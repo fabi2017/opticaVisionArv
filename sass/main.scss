@@ -18,6 +18,18 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 
+    @include tablet {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+
+    }
+
+    @include movil {
+        overflow-x: hidden;
+    }
+
     main {
         background-color: rgb(249, 233, 233);
         border-bottom: tomato 1px solid;
@@ -25,13 +37,12 @@ body {
 
         @include tablet {
             overflow-x: hidden;
-            overflow-y: hidden;            
+            overflow-y: hidden;
             border-top: tomato 2px solid;
             padding: 0 20px;
         }
 
-        @include movil
-        {
+        @include movil {
             overflow-x: hidden;
             overflow-y: hidden;
             border-top: tomato 2px solid;
@@ -40,24 +51,31 @@ body {
         }
     }
 
-    h1{
+    h1 {
         text-align: center;
-        text-decoration:underline rgba(250, 144, 125, 0.605) solid 3px;;
-        padding-top:20px;
+        text-decoration: underline rgba(250, 144, 125, 0.605) solid 3px;
+        ;
+        padding-top: 20px;
         font-family: 'Overlock', cursive;
         animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        
+
         @include tablet {
             font-size: 2.5rem;
             animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
         }
     }
+
     h2 {
         color: $fuenteAzul;
         padding: 5px 0;
 
         @include tablet {
-            font-size: 2.2rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        @include movil {
+            font-size: 1.8rem;
             font-weight: bold;
         }
 
@@ -66,6 +84,7 @@ body {
     h3 {
         color: $fuenteAzul;
         padding: 5px 0;
+
         @include tablet {
             font-size: 2rem;
             text-decoration: underline;
@@ -84,7 +103,11 @@ body {
         font-size: 1.1rem;
 
         @include tablet {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
+        }
+
+        @include movil {
+            font-size: 1rem;
         }
     }
 
@@ -94,7 +117,10 @@ body {
         padding-left: 30px;
 
         @include tablet {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+        }
+        @include movil {
+            font-size: 1rem;
         }
     }
 }
@@ -157,61 +183,67 @@ body {
 /*-----Se usa en los iconos del footer-------*/
 @keyframes scale-in-center {
     0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      opacity: 1;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
     }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
-    }
-  }
- /*-----Se us en los videos de productos------*/ 
-  @keyframes fade-in-fwd {
-    0% {
-      -webkit-transform: translateZ(-80px);
-              transform: translateZ(-80px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
 
- /*----Se usa en los titulos-------*/ 
-  @keyframes tracking-in-expand-fwd {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px);
-              transform: translateZ(-700px);
-      opacity: 0;
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
     }
+}
+
+/*-----Se us en los videos de productos------*/
+@keyframes fade-in-fwd {
+    0% {
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+/*----Se usa en los titulos-------*/
+@keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  
 
-  @keyframes kenburns-top {
-    0% {
-      -webkit-transform: scale(1) translateY(0);
-              transform: scale(1) translateY(0);
-      -webkit-transform-origin: 50% 16%;
-              transform-origin: 50% 16%;
-    }
     100% {
-      -webkit-transform: scale(1.25) translateY(-15px);
-              transform: scale(1.25) translateY(-15px);
-      -webkit-transform-origin: top;
-              transform-origin: top;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
     }
-  }
-  
+}
+
+/*---Se usa en los productos---*/
+
+@keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}

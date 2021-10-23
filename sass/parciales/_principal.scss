@@ -1,6 +1,11 @@
 @import "mediaqueries";
 
 /*-----------PRINCIPAL-----------*/
+
+
+
+
+
 .grilla {
     display: grid;
     grid-template-columns: 1.3fr 0.2fr;
@@ -9,17 +14,26 @@
     grid-template-areas: ". .";
     padding: 20px;
 
-    @include tablet{
+    p {
+        @include movil {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    @include tablet {
         display: inline-flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    @include movil{
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    @include movil {       
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
     }
+
 
 
     &__catalogoPrin {
@@ -28,14 +42,29 @@
         justify-content: center;
         flex-wrap: wrap;
 
+
+        @include movil {
+            display: flex;           
+            flex-direction: column;           
+            flex-wrap: wrap;           
+            align-items: flex-start;           
+            align-content: flex-start;
+
+        }
+
         &--img {
 
             border-radius: $borde+30;
             margin-right: 30px;
-            height: 220px;
+            height: 200px;
             margin-bottom: 50px;
             box-shadow: 1px 2px 10px 1px rgba(242, 161, 161, 0.89);
-            
+
+            @include movil{
+               width: 100%;
+               border-radius: $borde;
+            }
+           
         }
     }
 
@@ -47,9 +76,9 @@
         height: 600px;
         box-shadow: $sombreado;
         animation: color-cambio-2x 2s linear infinite alternate both;
-        
+
         @include tablet {
-           
+
             margin: 5px;
             padding-top: 100px;
             height: 350px;
@@ -57,11 +86,11 @@
         }
 
         @include movil {
-           
-            margin-right: 30px;
-            height: 400px;
+            align-self: center;
+            height: 450px;
+            width: 100%;
         }
-       
+
 
         &--titulo {
             font-weight: bold;
@@ -77,15 +106,16 @@
             height: 70px;
             padding: 5px;
 
-            @include tablet{
+            @include tablet {
                 height: 5rem;
                 padding-left: 2.5rem;
             }
 
-            @include movil { 
+            @include movil {
+                display: flex;
+                align-items: center;
                 height: 4rem;
-                padding-left: 3rem;
-                
+
             }
         }
     }
@@ -108,7 +138,8 @@
         width: 10rem;
         margin-left: 250px;
 
-        @include  movil{
+        @include movil {
+            width: 8rem;
             margin-left: 5rem;
         }
 
@@ -120,8 +151,8 @@
         color: black;
         font-style: italic;
 
-        @include tablet{
-            font-size: 2rem;
+        @include tablet {
+            font-size: 1.3rem;
         }
     }
 }

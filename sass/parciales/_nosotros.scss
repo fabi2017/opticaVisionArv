@@ -14,17 +14,22 @@ $borde: 20px;
     flex-wrap: wrap;
     box-shadow: $sombreado;
     animation: color-banNosotros-2x 1s linear infinite alternate both;
-    
-    @include movil{
-        height: 50vh;
+
+    @include movil {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
     }
 
-    
-
-    img{
+    img {
         height: 80px;
-        @include movil{
-            height: 80px;
+
+        @include movil {
+            width: 50%;
+            object-fit: contain;
+            align-self: center;
         }
     }
 
@@ -33,15 +38,24 @@ $borde: 20px;
         margin-right: 30px;
         padding: 40px 20px 0 10px;
 
-        @include movil{
-            font-size: 1.3rem;
+        @include movil {
+            font-size: 1rem;
             font-weight: bold;
+            padding: 10px;
+            text-align: center;
+
         }
     }
 
     .borde {
         border-right: rgba(250, 144, 125, 0.448) solid 3px;
-       
+
+        @include movil {
+            padding: 10px;
+            margin: 0;
+        }
+
+
     }
 }
 
@@ -51,16 +65,16 @@ $borde: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
-    @include tablet{
+    @include tablet {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: 10px;       
+        grid-row-gap: 10px;
 
     }
 
-    @include movil{
+    @include movil {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -68,10 +82,11 @@ $borde: 20px;
         grid-row-gap: 10px;
     }
 
-    
+
     &__img1 {
         grid-area: 1 / 1 / 2 / 2;
-        @include tablet{
+
+        @include tablet {
             grid-area: 1 / 1 / 2 / 2;
         }
 
@@ -83,9 +98,11 @@ $borde: 20px;
 
     &__img2 {
         grid-area: 1 / 3 / 2 / 4;
+
         @include tablet {
             grid-area: 2 / 2 / 3 / 3;
         }
+
         @include movil {
             grid-area: 2 / 2 / 3 / 3;
         }
@@ -93,9 +110,11 @@ $borde: 20px;
 
     &__img3 {
         grid-area: 2 / 2 / 3 / 3;
+
         @include tablet {
             grid-area: 3 / 1 / 4 / 2;
         }
+
         @include movil {
             grid-area: 3 / 1 / 4 / 2;
         }
@@ -103,19 +122,23 @@ $borde: 20px;
 
     &__img4 {
         grid-area: 3 / 1 / 4 / 2;
+
         @include tablet {
             grid-area: 4 / 2 / 5 / 3;
         }
+
         @include movil {
-           display: none;
+            display: none;
         }
     }
 
     &__img5 {
         grid-area: 3 / 3 / 4 / 4;
+
         @include tablet {
             grid-area: 5 / 1 / 6 / 2;
         }
+
         @include movil {
             display: none;
         }
@@ -136,7 +159,8 @@ $borde: 20px;
         }
 
         @include movil {
-            width: 180px;
+            height: 250px;
+            width: 140px;
         }
 
     }
@@ -145,6 +169,8 @@ $borde: 20px;
         height: 100%;
         width: 100%;
         object-fit: cover;
+
+
     }
 
 }
