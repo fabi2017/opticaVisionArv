@@ -11,8 +11,7 @@
     border-radius: 5px;
 
     @include movil {
-        border: rgb(71, 19, 139) solid 1px;
-        width: 300px;
+        width: 100%;
         box-shadow: none;
     }
 

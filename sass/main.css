@@ -296,9 +296,9 @@ footer {
         width: 100%; } }
     @media screen and (min-width: 320px) and (max-width: 480px) {
       .grilla__banner {
-        align-self: center;
-        height: 450px;
-        width: 100%; } }
+        align-items: center;
+        width: 100%;
+        height: 400px; } }
     .grilla__banner--titulo {
       font-weight: bold;
       text-align: center; }
@@ -315,8 +315,8 @@ footer {
       @media screen and (min-width: 320px) and (max-width: 480px) {
         .grilla__banner--img {
           display: flex;
-          align-items: center;
-          height: 4rem; } }
+          height: 3rem;
+          margin: auto; } }
 
 .marcas {
   margin-bottom: 10px; }
@@ -429,8 +429,7 @@ footer {
   border-radius: 5px; }
   @media screen and (min-width: 320px) and (max-width: 480px) {
     .tablaObrasoc {
-      border: #47138b solid 1px;
-      width: 300px;
+      width: 100%;
       box-shadow: none; } }
   .tablaObrasoc ul {
     list-style: none; }
