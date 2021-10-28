@@ -16,11 +16,12 @@ header {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+
+     
     
 }
 
 .navegador {
-    background: transparent;
     width: 100%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
 }
@@ -86,33 +87,6 @@ header {
     }
 }
 
-.contenedor-slider {
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 80%;
-    box-shadow: $sombreado;
-}
-
-.carousel-item {
-    &__img {
-        width: 90%;
-        height: 30rem;
-        object-fit: cover;
-    }
-
-    &__video {
-        width: 100%;
-        height: 30rem;
-        object-fit: cover;
-    }
-}
-
-.wave{
-   
-    height: 80px;
-    overflow: hidden;
-}
 
 
 /*------------FOOTER------------------*/
