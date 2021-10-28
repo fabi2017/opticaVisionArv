@@ -16,7 +16,7 @@ header {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    border-bottom: tomato 1px solid;
+    
 }
 
 .navegador {
@@ -106,6 +106,12 @@ header {
         height: 30rem;
         object-fit: cover;
     }
+}
+
+.wave{
+   
+    height: 80px;
+    overflow: hidden;
 }
 
 

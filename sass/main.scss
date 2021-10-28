@@ -32,20 +32,20 @@ body {
 
     main {
         background-color: rgb(249, 233, 233);
-        border-bottom: tomato 1px solid;
+        border-bottom: tomato 1px solid;     
         padding: 0 40px;
 
         @include tablet {
             overflow-x: hidden;
             overflow-y: hidden;
-            border-top: tomato 2px solid;
+            
             padding: 0 20px;
         }
 
         @include movil {
             overflow-x: hidden;
             overflow-y: hidden;
-            border-top: tomato 2px solid;
+         
             padding: 0 10px;
 
         }
@@ -241,8 +241,8 @@ body {
     }
 
     100% {
-        -webkit-transform: scale(1.25) translateY(-15px);
-        transform: scale(1.25) translateY(-15px);
+        -webkit-transform: scale(1.15) translateY(-15px);
+        transform: scale(1.15) translateY(-15px);
         -webkit-transform-origin: top;
         transform-origin: top;
     }
