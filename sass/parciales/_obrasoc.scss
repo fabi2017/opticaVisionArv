@@ -23,7 +23,7 @@
         }
 
         li {
-            color: rgb(81, 111, 21);
+            color: rgb(152, 4, 105);
             font-weight: bold;
             font-style: italic;
 
@@ -110,26 +110,34 @@
 
 
 .contenedor_obrasoc {
-    padding-bottom: 10px;
+    margin: 30px 0;
     display: flex;
     justify-content: center;
 
     @include tablet {
-        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     @include movil {
-        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
 
     }
 
     img {
         width: 200px;
         padding-right: 20px;
+        object-fit: contain;
+
+        @include tablet{
+            margin-bottom: 10px;
+        }
 
         @include movil {
-            height: 40px;
-            margin-left: 15px;
+            width: 130px;
+            margin-left: 20px;
+            margin-bottom: 10px;
         }
     }
 }

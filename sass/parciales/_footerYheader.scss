@@ -8,15 +8,17 @@ $fuentePrincipal:'Play',sans-serif;
 /*----------HEADER--------*/
 header {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom,
+    height: 15vh;
+   /*  background: linear-gradient(to bottom,
             rgba(247, 143, 119, 0.6),
             rgba(29, 241, 171, .6),
             rgba(7, 109, 150, .45)), url(../media/fondo3.jpg);
     background-attachment: fixed;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
 
+    background-color: rgb(249, 233, 233);
+   
      
     
 }
@@ -24,6 +26,15 @@ header {
 .navegador {
     width: 100%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    position: fixed;
+    z-index: 1;
+    background: linear-gradient(to bottom,
+            rgba(247, 143, 119, 0.6),
+            rgba(29, 241, 171, .6),
+            rgba(7, 109, 150, .45)), url(../media/fondo3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .navbar-brand {

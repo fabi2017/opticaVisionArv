@@ -1,18 +1,28 @@
 /*----------HEADER--------*/
 header {
   width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 143, 119, 0.6)), color-stop(rgba(29, 241, 171, 0.6)), to(rgba(7, 109, 150, 0.45))), url(../media/fondo3.jpg);
-  background: linear-gradient(to bottom, rgba(247, 143, 119, 0.6), rgba(29, 241, 171, 0.6), rgba(7, 109, 150, 0.45)), url(../media/fondo3.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  height: 15vh;
+  /*  background: linear-gradient(to bottom,
+            rgba(247, 143, 119, 0.6),
+            rgba(29, 241, 171, .6),
+            rgba(7, 109, 150, .45)), url(../media/fondo3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
+  background-color: #f9e9e9;
 }
 
 .navegador {
   width: 100%;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 143, 119, 0.6)), color-stop(rgba(29, 241, 171, 0.6)), to(rgba(7, 109, 150, 0.45))), url(../media/fondo3.jpg);
+  background: linear-gradient(to bottom, rgba(247, 143, 119, 0.6), rgba(29, 241, 171, 0.6), rgba(7, 109, 150, 0.45)), url(../media/fondo3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .navbar-brand img {
@@ -414,6 +424,10 @@ footer {
   .video {
     width: 300%;
   }
+}
+
+.asd {
+  display: none;
 }
 
 .contenedor-slider {
@@ -821,7 +835,7 @@ footer {
 }
 
 .tablaObrasoc ul li {
-  color: #516f15;
+  color: #980469;
   font-weight: bold;
   font-style: italic;
 }
@@ -926,7 +940,7 @@ footer {
 }
 
 .contenedor_obrasoc {
-  padding-bottom: 10px;
+  margin: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -937,25 +951,42 @@ footer {
 
 @media screen and (max-width: 768px) {
   .contenedor_obrasoc {
-    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .contenedor_obrasoc {
-    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 .contenedor_obrasoc img {
   width: 200px;
   padding-right: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor_obrasoc img {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .contenedor_obrasoc img {
-    height: 40px;
-    margin-left: 15px;
+    width: 130px;
+    margin-left: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1574,18 +1605,18 @@ body ul {
 /*--se usa secc obrasoc--*/
 @-webkit-keyframes color-change-2x {
   0% {
-    background: #d3acbd;
+    background: #dfbbcb;
   }
   100% {
-    background: #400a60;
+    background: #ce6196;
   }
 }
 @keyframes color-change-2x {
   0% {
-    background: #d3acbd;
+    background: #dfbbcb;
   }
   100% {
-    background: #400a60;
+    background: #ce6196;
   }
 }
 
