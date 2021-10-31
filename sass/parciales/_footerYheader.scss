@@ -8,15 +8,16 @@ $fuentePrincipal:'Play',sans-serif;
 /*----------HEADER--------*/
 header {
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     background-color: rgb(249, 233, 233);  
 
     @include tablet{
-        height: 20vh;
+        height: 15vh;
     }
 
     @include movil{
-        height: 15vh;
+        background-color: blue;
+        height: 11vh;
     }
      
     
@@ -108,7 +109,7 @@ footer {
     background-position: center;
     background-size: cover;
     padding-top: 5px;
-    height: 36vh;
+    height: 100%;
 
 
     @include tablet {
