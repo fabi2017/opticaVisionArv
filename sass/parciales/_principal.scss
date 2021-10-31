@@ -10,6 +10,7 @@
 
     @include tablet {
         height: 95vh;
+        margin-top: 20px;
     }
 }
  
@@ -39,10 +40,6 @@
         width: 300%;
     }   
 
-   }
-
-   .asd {
-       display: none;
    }
 
 .contenedor-slider {

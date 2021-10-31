@@ -3,23 +3,33 @@ $ancho: 1400px;
 
 
 .contacto {
-    display: flex;
 
-    @include tablet{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "contac ubic"
+        "img ubic";
+    height: 105vh;
+
+    @include tablet {
         display: inline-flex;
-        flex-direction: column;
         flex-wrap: wrap;
+        height: 100%;
     }
 
-    @include movil{
+    @include movil {
         display: inline-flex;
         flex-direction: column;
         flex-wrap: wrap;
         padding: 0;
     }
 
+
     &__form {
-        height: 80%;
+        grid-area: contac;
+        height: 95%;
         padding: 10px;
         box-shadow: $sombreado;
         color: rgb(22, 22, 143);
@@ -28,41 +38,68 @@ $ancho: 1400px;
         margin: 10px;
         border-radius: $borde/4;
 
-       @include tablet{
+        @include tablet {
             font-size: 1.3rem;
             text-align: center;
-        } 
 
-        @include movil{
+        }
 
+        @include movil {
             font-size: 1rem;
             width: 100%;
             margin: 0;
             text-align: center;
         }
-
     }
 
-    &__boton {
-        border-radius: $borde;
+
+    .btForm {
+
+        margin: 10px 80px;
         height: 30px;
-        width: 150px;
-        margin-right: 10px;
-        background: rgb(219, 223, 215);
-        color: rgb(6, 6, 57);
+        align-items: center;
+
+        @include tablet {
+            font-size: 1.1rem;
+        }
 
         @include movil {
-            
+
             margin: 10px 0;
         }
 
         &:hover {
-
-            background-color: rgb(235, 228, 214);
             cursor: pointer;
             font-weight: bolder;
             font-size: 1rem;
             animation: pulsate-btnContacto 0.8s ease-in-out infinite both;
+        }
+    }
+
+    &__imagen {
+        grid-area: img;
+        margin-left: 10px;
+        width: 97%;
+        box-shadow: $sombreado;
+        height: 285px;
+        border-radius: 20px;
+
+
+        @include tablet {
+            display: none;
+
+        }
+
+        @include movil {
+            display: none;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            opacity: 0.9;
         }
     }
 
@@ -72,12 +109,18 @@ $ancho: 1400px;
         align-items: stretch;
         box-shadow: $sombreado;
         border-radius: $borde/2;
-        margin: 10px;
+        margin-top: 10px;
         width: $ancho/2;
+        height: 95%;
         padding: 10px;
+        grid-area: ubic;
 
-        h2{
-            text-align: center;            
+
+        @include tablet {
+            height: 100%;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            width: $ancho/2;
         }
 
         @include movil {
@@ -85,12 +128,18 @@ $ancho: 1400px;
             margin: 20px 0;
         }
 
+
+        h2 {
+            text-align: center;
+        }
+
+
         &--cont {
             display: flex;
             justify-content: flex-start;
             margin: 5px;
 
-            @include movil{
+            @include movil {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
@@ -104,7 +153,7 @@ $ancho: 1400px;
                 text-shadow: 4px -1px 11px rgba(222, 11, 11, 0.27);
                 padding-right: 10px;
 
-                @include movil{
+                @include movil {
                     margin-top: 0;
                     font-size: 1rem;
                     text-align: center;
@@ -113,10 +162,10 @@ $ancho: 1400px;
             }
 
             iframe {
-                box-shadow:$sombreado;
+                box-shadow: $sombreado;
                 margin-right: 15px;
 
-                @include movil{
+                @include movil {
                     width: 100%;
                 }
             }
