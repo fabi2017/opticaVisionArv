@@ -14,6 +14,10 @@ header {
     @include tablet{
         height: 20vh;
     }
+
+    @include movil{
+        height: 15vh;
+    }
      
     
 }

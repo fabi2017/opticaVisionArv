@@ -11,6 +11,12 @@ header {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  header {
+    height: 15vh;
+  }
+}
+
 .navegador {
   width: 100%;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
@@ -450,9 +456,21 @@ footer {
      object-fit: cover;
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .carousel-item__img {
+    width: 100%;
+  }
+}
+
 .wave {
   height: 80px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .wave {
+    height: 90px;
+  }
 }
 
 .grilla {
