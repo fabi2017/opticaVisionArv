@@ -283,11 +283,12 @@ footer {
 
             @include tablet {
                 margin: 0;
+                width: 80%;
                 max-width: 500px;
             }
 
             @include movil {
-                max-width: 350px;
+                max-width: 400px;
             }
         }
 
