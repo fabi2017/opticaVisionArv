@@ -12,7 +12,7 @@ header {
     background-color: rgb(249, 233, 233);  
 
     @include tablet{
-        height: 15vh;
+        height: 10vh;
     }
 
     @include movil{
@@ -277,19 +277,17 @@ footer {
         .line {
             width: 100%;
             max-width: 800px;
-            margin-left: 20px;
             height: 1px;
             background: tomato;
             box-shadow: $sombreado;
 
             @include tablet {
-                width: 100%;
+                margin: 0;
                 max-width: 500px;
             }
 
             @include movil {
-                width: 80%;
-                max-width: 300px;
+                max-width: 350px;
             }
         }
 
