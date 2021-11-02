@@ -513,9 +513,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1135,19 +1134,6 @@ footer {
 
 @media screen and (max-width: 768px) {
   .muestrario {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr, 1fr, 1fr;
-        grid-template-columns: 1fr, 1fr, 1fr;
-    -ms-grid-rows: 1fr, 1fr;
-        grid-template-rows: 1fr, 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .muestrario {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1194,7 +1180,7 @@ footer {
   grid-area: 2 / 1 / 3 / 2;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .muestrario__img3 {
     display: none;
   }
@@ -1226,7 +1212,9 @@ footer {
 
 @media screen and (max-width: 768px) {
   .muestrario__img, .muestrario__img2, .muestrario__img3, .muestrario__img4 {
+    height: 300px;
     width: 200px;
+    margin: 0;
   }
 }
 
@@ -1234,7 +1222,6 @@ footer {
   .muestrario__img, .muestrario__img2, .muestrario__img3, .muestrario__img4 {
     height: 200px;
     width: 150px;
-    margin: 0;
   }
 }
 
@@ -1245,40 +1232,34 @@ footer {
      object-fit: cover;
 }
 
-.muestrario__text, .muestrario__text2 {
+.muestrario__text {
   text-align: center;
   padding-top: 80px;
 }
 
 @media screen and (max-width: 768px) {
-  .muestrario__text, .muestrario__text2 {
-    padding-top: 50px;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .muestrario__text, .muestrario__text2 {
+  .muestrario__text {
     padding-top: 5px;
   }
 }
 
-.muestrario p {
+.muestrario__text p {
   font-size: 1.3rem;
 }
 
 @media screen and (max-width: 768px) {
-  .muestrario p {
+  .muestrario__text p {
     font-size: 1.1rem;
   }
 }
 
-.muestrario ul {
+.muestrario__text ul {
   font-size: 1.3rem;
   list-style: none;
 }
 
 @media screen and (max-width: 768px) {
-  .muestrario ul {
+  .muestrario__text ul {
     font-size: 1.1rem;
   }
 }

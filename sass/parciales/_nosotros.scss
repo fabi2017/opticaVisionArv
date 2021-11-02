@@ -67,18 +67,10 @@ $borde: 20px;
     grid-row-gap: 50px;
 
 
-    @include tablet{
-        display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
-        grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    }
-
-    @include movil{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
@@ -97,7 +89,8 @@ $borde: 20px;
 
     &__img3 {
         grid-area: 2 / 1 / 3 / 2;
-        @include movil{
+
+        @include tablet {
             display: none;
         }
     }
@@ -109,29 +102,25 @@ $borde: 20px;
     &__img4 {
         grid-area: 2 / 3 / 3 / 4;
         margin-top: 50px;
-
-        
     }
-
-
 
     &__img,
     &__img2,
     &__img3,
-    &__img4
-        {
+    &__img4 {
         width: 400px;
         box-shadow: $sombreado;
         height: 400px;
 
         @include tablet {
+            height: 300px;
             width: 200px;
+            margin: 0;
         }
 
         @include movil {
             height: 200px;
             width: 150px;
-            margin: 0;
         }
 
     }
@@ -140,42 +129,36 @@ $borde: 20px;
         height: 100%;
         width: 100%;
         object-fit: cover;
-
-
     }
 
-    &__text,
-    &__text2 {
+    &__text {
         text-align: center;
         padding-top: 80px;
 
-        @include tablet{
-            padding-top: 50px;
+        @include tablet {
+            padding-top: 5px;
         }
 
-        @include movil{
-            padding-top: 5px;
+        p {
+            font-size: 1.3rem;
+    
+            @include tablet {
+                font-size: 1.1rem;
+            }
+        }
+    
+        ul {
+            font-size: 1.3rem;
+            list-style: none;
+    
+            @include tablet {
+                font-size: 1.1rem;
+            }
         }
 
        
     }
-
-
-    p{
-        font-size: 1.3rem;
-        @include tablet{
-            font-size: 1.1rem;
-        }
-    }
-
-    ul{
-        font-size: 1.3rem;
-        list-style: none;
-        @include tablet{
-            font-size: 1.1rem;
-        }
-    }
+   
+    
 
 }
-
-
