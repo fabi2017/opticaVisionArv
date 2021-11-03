@@ -5,13 +5,17 @@
 .btn {
     margin-left: 250px;
 
-    @include tablet { 
-        margin-left: 35%;
+    @include laptop { 
+        margin-left: 40%;
         display: flex;
         flex-direction: column;
         justify-content: center; 
         width: 200px;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    @include tablet { 
+        margin-left: 35%;
     }
 
     @include movil {
@@ -40,7 +44,7 @@
     &__contVideo {
         margin: 10px 0;
 
-        @include tablet {
+        @include laptop {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -56,10 +60,14 @@
 
 
 
-            @include tablet {
-                height: 20rem;
+            @include laptop {
+                height: 23rem;
                 padding: 10px 0 0 0;
 
+            }
+
+            @include tablet{
+                height: 20rem;
             }
 
             @include movil {

@@ -184,9 +184,11 @@ footer {
             height: 6rem;
             padding-left: 180px;
 
-            @include tablet {
+
+
+            @include laptop {
                 height: 6rem;
-                padding-left: 100px;
+                padding-left: 70px;
             }
 
             @include movil {

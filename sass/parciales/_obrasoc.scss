@@ -114,16 +114,16 @@
     display: flex;
     justify-content: center;
 
-    @include tablet {
+    @include laptop  {
         display: flex;
         flex-wrap: wrap;
     }
-
+/* 
     @include movil {
         display: flex;
         flex-wrap: wrap;
 
-    }
+    } */
 
     img {
         width: 200px;

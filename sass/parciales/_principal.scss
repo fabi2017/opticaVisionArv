@@ -27,6 +27,11 @@
     width: 100%;
     opacity: 0.8;
     
+    @include laptop{
+        margin-top: 100px;
+        width: 250%;
+    }    
+
     @include tablet{
         margin-top: 100px;
         width: 250%;
@@ -74,6 +79,10 @@
     height: 80px;
     overflow: hidden;
 
+    @include laptop {
+        margin-bottom: -10px;
+    }
+
     @include movil{
         height: 50px;
     }
@@ -120,6 +129,8 @@
         flex-wrap: wrap;
 
 
+
+
         @include movil {
             display: flex;
             flex-direction: column;
@@ -137,6 +148,10 @@
             margin-bottom: 50px;
             box-shadow: 1px 2px 10px 1px rgba(242, 161, 161, 0.89);
             object-fit: cover;
+
+            @include laptop {
+                margin-right: 10px;
+            }
 
             @include movil {
                 width: 100%;
@@ -200,6 +215,12 @@
 
 .marcas {
     margin-bottom: 30px;    
+
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     
     @include tablet{
         display: flex;
@@ -208,16 +229,15 @@
         flex-wrap: wrap;
     }
 
-  /*   @include movil {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-    }
- */
     &__img {
         width: 10rem;
         margin-left: 220px;
+
+
+        @include laptop{
+            width: 8rem;
+         margin-left: 150px;
+        }
 
         @include tablet{ 
             
@@ -230,9 +250,7 @@
         }
 
 
-        @include movil {/* 
-            display: flex;
-            flex-direction: column; */
+        @include movil {
             width: 6rem;
             
             margin: 0 3rem;

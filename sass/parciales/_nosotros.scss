@@ -46,9 +46,13 @@ $borde: 20px;
         padding: 40px 20px 0 10px;
 
         
-        /* @include laptop{
+         @include laptop{
             margin-right: 100px;
-        } */
+        } 
+
+        @include tablet{
+            margin-right: 30px;
+        }
 
         @include movil {
             font-size: 1rem;
@@ -77,14 +81,14 @@ $borde: 20px;
     grid-template-rows: 1fr, 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 50px;
-/* 
+
 
     @include laptop{
         grid-column-gap: 10px;
     grid-row-gap: 20px;
 
     }
- */
+ 
 
     @include tablet {
         display: flex;
@@ -131,9 +135,9 @@ $borde: 20px;
         box-shadow: $sombreado;
         height: 400px;
 
-       /*  @include laptop{
+        @include laptop{
             width: 300px;
-        } */
+        } 
 
         @include tablet {
             height: 300px;

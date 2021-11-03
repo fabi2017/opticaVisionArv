@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 
-    @include tablet {
+    @include laptop {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -35,7 +35,7 @@ body {
         border-bottom: tomato 1px solid;     
         padding: 0 40px;
 
-        @include tablet {
+        @include laptop {
             overflow-x: hidden;
             overflow-y: hidden;
             
@@ -59,7 +59,7 @@ body {
         font-family: 'Overlock', cursive;
         animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 
-        @include tablet {
+        @include laptop{
             margin-top: 25px;
             font-size: 2.5rem;
             animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
