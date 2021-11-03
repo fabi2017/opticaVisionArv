@@ -15,6 +15,9 @@ $borde: 20px;
     box-shadow: $sombreado;
     animation: color-banNosotros-2x 1s linear infinite alternate both;
 
+
+    
+
     @include movil {
 
         display: flex;
@@ -25,6 +28,10 @@ $borde: 20px;
 
     img {
         height: 80px;
+
+        @include laptop{
+            height: 70px;
+        }
 
         @include movil {
             width: 50%;
@@ -37,6 +44,11 @@ $borde: 20px;
         font-weight: bold;
         margin-right: 30px;
         padding: 40px 20px 0 10px;
+
+        
+        /* @include laptop{
+            margin-right: 100px;
+        } */
 
         @include movil {
             font-size: 1rem;
@@ -65,7 +77,14 @@ $borde: 20px;
     grid-template-rows: 1fr, 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 50px;
+/* 
 
+    @include laptop{
+        grid-column-gap: 10px;
+    grid-row-gap: 20px;
+
+    }
+ */
 
     @include tablet {
         display: flex;
@@ -112,6 +131,10 @@ $borde: 20px;
         box-shadow: $sombreado;
         height: 400px;
 
+       /*  @include laptop{
+            width: 300px;
+        } */
+
         @include tablet {
             height: 300px;
             width: 200px;
@@ -139,6 +162,7 @@ $borde: 20px;
         @include tablet {
             padding-top: 5px;
         }
+        
         p {
             font-size: 1.3rem;
     
