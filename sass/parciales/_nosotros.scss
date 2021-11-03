@@ -131,14 +131,14 @@ $borde: 20px;
         object-fit: cover;
     }
 
-    &__text {
+    &__text, 
+    &__text2 {
         text-align: center;
         padding-top: 80px;
 
         @include tablet {
             padding-top: 5px;
         }
-
         p {
             font-size: 1.3rem;
     
@@ -155,10 +155,11 @@ $borde: 20px;
                 font-size: 1.1rem;
             }
         }
-
+     
        
     }
    
-    
+   
+
 
 }

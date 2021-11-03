@@ -4,17 +4,14 @@ $ancho: 1400px;
 
 .contacto {
 
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
-        "contac ubic"
-        "img ubic";
-    height: 75vh;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px ;
 
     @include tablet {
-        display: flex;        
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         height: 100%;
@@ -29,18 +26,17 @@ $ancho: 1400px;
 
 
     &__form {
-        grid-area: contac;
-        height: 40vh;
+        height: 100%;
         padding: 10px;
         box-shadow: $sombreado;
         color: rgb(22, 22, 143);
         font-weight: bold;
-        width: $ancho/2;
+        width: $ancho/1.5;
         margin: 10px;
         border-radius: $borde/4;
 
         @include tablet {
-            
+
             width: 100%;
             height: 100%;
             font-size: 1.3rem;
@@ -69,9 +65,6 @@ $ancho: 1400px;
         }
 
         @include movil {
-            /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
             margin: 10px 0 10px 80px;
             height: 40px;
             font-size: 1rem;
@@ -86,12 +79,11 @@ $ancho: 1400px;
     }
 
     &__imagen {
-        grid-area: img;
         margin-left: 10px;
-        width: 97%;
+        width: 100%;
+        height: 25vh;
         box-shadow: $sombreado;
-        height: 30vh;
-        border-radius: 20px;
+        border-radius: 10px;
 
 
         @include tablet {
@@ -99,16 +91,13 @@ $ancho: 1400px;
 
         }
 
-        @include movil {
-            display: none;
-        }
 
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             border-radius: 10px;
-            opacity: 0.9;
+            opacity: 0.75;
         }
     }
 
@@ -119,10 +108,9 @@ $ancho: 1400px;
         box-shadow: $sombreado;
         border-radius: $borde/2;
         margin-top: 10px;
-        width: 95%;
-        height: 71vh;
+        width: $ancho/1.5;
+        height: 100%;
         padding: 10px;
-        grid-area: ubic;
 
 
         @include tablet {
@@ -146,6 +134,7 @@ $ancho: 1400px;
             display: flex;
             justify-content: flex-start;
             margin: 5px;
+            
 
             @include movil {
                 display: flex;
@@ -159,7 +148,7 @@ $ancho: 1400px;
                 font-weight: 800;
                 color: rgb(22, 22, 143);
                 text-shadow: 4px -1px 11px rgba(222, 11, 11, 0.27);
-                padding-right: 10px;
+                padding-right: 20px;
 
                 @include movil {
                     margin-top: 0;
@@ -171,10 +160,11 @@ $ancho: 1400px;
 
             iframe {
                 box-shadow: $sombreado;
-                margin-right: 15px;
+                margin-left: 10px;
 
                 @include movil {
                     width: 100%;
+                    margin:0 ;
                 }
             }
         }
