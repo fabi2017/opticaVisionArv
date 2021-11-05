@@ -14,10 +14,7 @@ $borde: 20px;
     flex-wrap: wrap;
     box-shadow: $sombreado;
     animation: color-banNosotros-2x 1s linear infinite alternate both;
-
-
-    
-
+   
     @include movil {
 
         display: flex;
@@ -87,15 +84,13 @@ $borde: 20px;
         grid-column-gap: 10px;
     grid-row-gap: 20px;
 
-    }
- 
+    } 
 
     @include tablet {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
 
     &__img {
         grid-area: 1 / 1 / 2 / 2;
@@ -149,7 +144,6 @@ $borde: 20px;
             height: 200px;
             width: 150px;
         }
-
     }
 
     img {
@@ -168,8 +162,7 @@ $borde: 20px;
         }
         
         p {
-            font-size: 1.3rem;
-    
+            font-size: 1.3rem;    
             @include tablet {
                 font-size: 1.1rem;
             }
@@ -182,12 +175,8 @@ $borde: 20px;
             @include tablet {
                 font-size: 1.1rem;
             }
-        }
-     
+        }     
        
-    }
-   
-   
-
+    }   
 
 }

@@ -2,6 +2,8 @@
 
 /*--------------SECCION PRODUCTOS--------*/
 
+
+/*--botones filtrado--*/
 .btn {
     margin-left: 250px;
 
@@ -57,9 +59,6 @@
             height: 320px;
             animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.5s both;
 
-
-
-
             @include laptop {
                 height: 23rem;
                 padding: 10px 0 0 0;
@@ -86,7 +85,6 @@
     height: 300px;
     margin: 20px 10px;
 
-
     @include movil {
         height: 200px;
     }
@@ -100,13 +98,11 @@
         cursor: pointer;
     }
 
-
     img {
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
-
 
 }
 
@@ -134,8 +130,6 @@
         width: 100%;
         object-fit: cover;
     }
-
-
 }
 
 

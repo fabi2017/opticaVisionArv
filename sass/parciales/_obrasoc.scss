@@ -10,8 +10,8 @@
     margin-bottom: 20px;
     border-radius: 5px;
 
-    @include movil {
-        width: 100%;
+    @include movil {/* 
+        width: 100%; */
         box-shadow: none;
     }
 
@@ -60,7 +60,7 @@
             font-size: 14px;
             font-family: Arial;
             font-weight: bold;
-            color: #ffffff;
+            color: white;
             animation: color-change-2x 2s linear infinite alternate both;
 
             @include tablet {
@@ -136,8 +136,8 @@
 
         @include movil {
             width: 130px;
-            margin-left: 20px;
-            margin-bottom: 10px;
+            margin-left: 20px;/* 
+            margin-bottom: 10px; */
         }
     }
 }

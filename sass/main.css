@@ -5,15 +5,8 @@ header {
   background-color: #f9e9e9;
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    height: 10vh;
-  }
-}
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
   header {
-    background-color: blue;
     height: 11vh;
   }
 }
@@ -29,6 +22,10 @@ header {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+.navbar-toggler {
+  background-color: rgba(220, 136, 144, 0.722);
 }
 
 .navbar-brand img {
@@ -93,11 +90,11 @@ header {
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .barraMenu li .nav-link {
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
+    /*  text-decoration: none;
+                text-align: center;
+                font-weight: bold;                
+                padding-bottom: 10px; */
     font-size: 1rem;
-    padding-bottom: 10px;
   }
 }
 
@@ -109,22 +106,19 @@ footer {
   background-size: cover;
   padding-top: 5px;
   height: 100%;
+  /*  @include movil {
+        height: 100%;
+        padding-top: 5px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        border-top: tomato 2px solid;
+    } */
 }
 
 @media screen and (max-width: 768px) {
   footer {
-    height: 100%;
-    padding-top: 5px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    border-top: tomato 2px solid;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  footer {
-    height: 100%;
-    padding-top: 5px;
+    /* height: 100%;
+        padding-top: 5px; */
     overflow-x: hidden;
     overflow-y: hidden;
     border-top: tomato 2px solid;
@@ -189,12 +183,9 @@ footer {
   font-family: 'Play', sans-serif;
   font-weight: bold;
   font-size: 1rem;
-}
-
-@media screen and (max-width: 768px) {
-  .grillaFooter__direc i p {
-    font-size: 1rem;
-  }
+  /*  @include tablet {
+                    font-size: 1rem;
+                } */
 }
 
 .grillaFooter__iconos {
@@ -217,7 +208,7 @@ footer {
 
 @media screen and (max-width: 1024px) {
   .grillaFooter__iconos img {
-    height: 6rem;
+    /*  height: 6rem; */
     padding-left: 70px;
   }
 }
@@ -225,7 +216,7 @@ footer {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .grillaFooter__iconos img {
     height: 5rem;
-    padding: 0 0 0 20px;
+    padding-left: 20px;
     margin: 10px 0;
   }
 }
@@ -421,8 +412,8 @@ footer {
 
 @media screen and (max-width: 768px) {
   .video {
-    margin-top: 100px;
-    width: 250%;
+    /*  margin-top: 100px;
+        width: 250%; */
   }
 }
 
@@ -444,7 +435,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   .contenedor-slider {
-    margin-top: 50px;
+    /*    margin-top: 50px; */
     height: 100%;
     margin-bottom: 5px;
   }
@@ -480,6 +471,11 @@ footer {
   }
 }
 
+.wave__svg {
+  height: 100%;
+  width: 100%;
+}
+
 .grilla {
   display: -ms-grid;
   display: grid;
@@ -490,13 +486,6 @@ footer {
   gap: 0px 10px;
       grid-template-areas: ". .";
   padding: 20px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .grilla p {
-    text-align: center;
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -517,6 +506,13 @@ footer {
   .grilla {
     padding: 0;
     margin: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .grilla p {
+    text-align: center;
     width: 100%;
   }
 }
@@ -600,17 +596,12 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
+    /*  width: 100%; */
     height: 400px;
   }
 }
 
-.grilla__banner--titulo {
-  font-weight: bold;
-  text-align: center;
-}
-
-.grilla__banner--text {
+.grilla__banner--titulo, .grilla__banner--text {
   font-weight: bold;
   text-align: center;
 }
@@ -639,16 +630,6 @@ footer {
 
 .marcas {
   margin-bottom: 30px;
-}
-
-@media screen and (max-width: 768px) {
-  .marcas {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -689,7 +670,6 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 8rem;
     margin: 0 5rem;
     padding-top: 1rem;
   }
@@ -699,7 +679,6 @@ footer {
   .marcas__img {
     width: 6rem;
     margin: 0 3rem;
-    padding-top: 1rem;
   }
 }
 
@@ -717,6 +696,7 @@ footer {
 }
 
 /*--------------SECCION PRODUCTOS--------*/
+/*--botones filtrado--*/
 .btn {
   margin-left: 250px;
 }
@@ -914,7 +894,8 @@ footer {
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .tablaObrasoc {
-    width: 100%;
+    /* 
+        width: 100%; */
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -970,7 +951,7 @@ footer {
   font-size: 14px;
   font-family: Arial;
   font-weight: bold;
-  color: #ffffff;
+  color: white;
   -webkit-animation: color-change-2x 2s linear infinite alternate both;
           animation: color-change-2x 2s linear infinite alternate both;
 }
@@ -1078,7 +1059,8 @@ footer {
   .contenedor_obrasoc img {
     width: 130px;
     margin-left: 20px;
-    margin-bottom: 10px;
+    /* 
+            margin-bottom: 10px; */
   }
 }
 
@@ -1341,6 +1323,10 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  /* form contacto*/
+  /*botones*/
+  /*banner imagen*/
+  /*form ubicacion*/
 }
 
 @media screen and (max-width: 768px) {
@@ -1398,12 +1384,12 @@ footer {
   .contacto__form {
     font-size: 1rem;
     margin: 0;
-    text-align: center;
   }
 }
 
 .contacto .btForm {
-  margin: 10px 80px;
+  margin-left: 250px;
+  margin-bottom: 10px;
   height: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1547,6 +1533,12 @@ footer {
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
   margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .contacto__ubicacion--cont iframe {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
