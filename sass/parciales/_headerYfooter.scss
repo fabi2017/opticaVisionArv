@@ -2,19 +2,20 @@
 $sombreado:0 0 8px 0 rgba(0, 0, 0, .5);
 $fuenteAzul: rgb(24, 33, 99);
 $borde: 20px;
-$fuentePrincipal:'Play',sans-serif;
+$fuentePrincipal:'Play',
+sans-serif;
 
 
 /*----------HEADER--------*/
 header {
     width: 100%;
     height: 10vh;
-    background-color: rgb(249, 233, 233);  
-    
-    @include movil{
+    background-color: rgb(249, 233, 233);
+
+    @include movil {
         height: 11vh;
-    }    
-    
+    }
+
 }
 
 .navegador {
@@ -32,7 +33,7 @@ header {
 }
 
 
-.navbar-toggler{
+.navbar-toggler {
     background-color: rgba(220, 136, 144, 0.722);
 }
 
@@ -87,10 +88,6 @@ header {
             }
 
             @include movil {
-               /*  text-decoration: none;
-                text-align: center;
-                font-weight: bold;                
-                padding-bottom: 10px; */
                 font-size: 1rem;
             }
         }
@@ -112,20 +109,12 @@ footer {
 
 
     @include tablet {
-        /* height: 100%;
-        padding-top: 5px; */
         overflow-x: hidden;
         overflow-y: hidden;
         border-top: tomato 2px solid;
     }
 
-   /*  @include movil {
-        height: 100%;
-        padding-top: 5px;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        border-top: tomato 2px solid;
-    } */
+
 }
 
 .grillaFooter {
@@ -164,9 +153,6 @@ footer {
                 font-weight: bold;
                 font-size: 1rem;
 
-               /*  @include tablet {
-                    font-size: 1rem;
-                } */
             }
         }
     }
@@ -184,13 +170,13 @@ footer {
             padding-left: 180px;
 
             @include laptop {
-               /*  height: 6rem; */
+                /*  height: 6rem; */
                 padding-left: 70px;
             }
 
             @include movil {
                 height: 5rem;
-                padding-left: 20px;
+                padding-left: 60px;
                 margin: 10px 0;
             }
 
@@ -263,7 +249,7 @@ footer {
             @include tablet {
                 padding-right: 150px;
                 font-size: 1.2rem;
-                            }
+            }
 
 
             @include movil {
@@ -286,6 +272,7 @@ footer {
             }
 
             @include movil {
+                margin-left: 20px;
                 max-width: 400px;
             }
         }

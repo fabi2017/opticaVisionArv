@@ -50,7 +50,7 @@ $ancho: 1400px;
         }
     }
 
-    /*botones*/
+    /*----------botones----------*/
     .btForm {
 
         
@@ -82,7 +82,7 @@ $ancho: 1400px;
             animation: pulsate-btnContacto 0.8s ease-in-out infinite both;
         }
     }
-    /*banner imagen*/
+    /*----------banner imagen-----------------*/
     &__imagen {
         margin-left: 10px;
         width: 100%;
@@ -102,7 +102,7 @@ $ancho: 1400px;
             opacity: 0.75;
         }
     }
-    /*form ubicacion*/
+    /*----------form ubicacion--------------*/
     &__ubicacion {
         display: flex;
         flex-direction: column;

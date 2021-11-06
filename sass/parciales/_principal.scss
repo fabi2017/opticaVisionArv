@@ -33,8 +33,6 @@
     }    
 
     @include tablet{
-       /*  margin-top: 100px;
-        width: 250%; */
     }    
    
     @include movil{
@@ -52,8 +50,7 @@
     width: 80%;
     box-shadow: $sombreado;
 
-    @include tablet {
-     /*    margin-top: 50px; */
+    @include tablet {    
         height: 100%;
         margin-bottom: 5px;
     }
@@ -177,8 +174,7 @@
         }
 
         @include movil {
-            align-items: center;
-           /*  width: 100%; */
+            align-items: center;        
             height: 400px;
         }
 

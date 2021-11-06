@@ -10,8 +10,7 @@
     margin-bottom: 20px;
     border-radius: 5px;
 
-    @include movil {/* 
-        width: 100%; */
+    @include movil {
         box-shadow: none;
     }
 
@@ -118,12 +117,6 @@
         display: flex;
         flex-wrap: wrap;
     }
-/* 
-    @include movil {
-        display: flex;
-        flex-wrap: wrap;
-
-    } */
 
     img {
         width: 200px;
@@ -136,8 +129,7 @@
 
         @include movil {
             width: 130px;
-            margin-left: 20px;/* 
-            margin-bottom: 10px; */
+            margin-left: 20px;
         }
     }
 }
